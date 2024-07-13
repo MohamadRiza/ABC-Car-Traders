@@ -1,0 +1,13 @@
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\ABC Car Traders.exe.config
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\ABC Car Traders.exe
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\ABC Car Traders.pdb
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.csproj.AssemblyReference.cache
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.csproj.SuggestedBindingRedirects.cache
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Properties.Resources.resources
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.csproj.GenerateResource.cache
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.csproj.CoreCompileInputs.cache
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.exe
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.pdb
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Loading.resources
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.LoginUser.resources
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Admin.resources
