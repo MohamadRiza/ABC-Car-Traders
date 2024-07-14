@@ -75,6 +75,9 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerRegister.resx">
+      <DependentUpon>CustomerRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\car-showroom-interiors.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-tibszabo-17451088.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

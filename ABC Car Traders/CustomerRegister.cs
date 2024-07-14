@@ -16,5 +16,57 @@ namespace ABC_Car_Traders
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you are the admin?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Hide();
+                Admin frmadmin = new Admin();
+                frmadmin.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("You are pressed No!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void CustomerRegister_Load(object sender, EventArgs e)
+        {
+            panel3.BackColor = Color.FromArgb(185, Color.Black);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginUser frm = new LoginUser();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure do you want to clear?", "Clear", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
+                textBox5.Clear();
+                textBox6.Clear();
+                comboBox1.ResetText();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.ExitThread();
+        }
     }
 }
