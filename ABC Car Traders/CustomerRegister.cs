@@ -56,6 +56,7 @@ namespace ABC_Car_Traders
                 textBox5.Clear();
                 textBox6.Clear();
                 comboBox1.ResetText();
+                checkBox1.Checked = false;
             }
         }
 
@@ -67,6 +68,28 @@ namespace ABC_Car_Traders
         private void button4_Click(object sender, EventArgs e)
         {
             Application.ExitThread();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox6.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox6.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

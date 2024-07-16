@@ -104,6 +104,16 @@ namespace ABC_Car_Traders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap photo_1493238792000_8113da705763 {
+            get {
+                object obj = ResourceManager.GetObject("photo-1493238792000-8113da705763", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_modern_double_color_futuristic_neon_background_image_351866 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-modern-double-color-futuristic-neon-background-image_351866", resourceCulture);
