@@ -33,5 +33,24 @@ namespace ABC_Car_Traders
             Admin frma = new Admin();
             frma.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageCars frm = new ManageCars();
+            frm.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageCars frm = new ManageCars();
+            frm.Show();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
