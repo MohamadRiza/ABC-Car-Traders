@@ -36,7 +36,7 @@ namespace ABC_Car_Traders
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = new Bitmap(openFileDialog.FileName);
             }
@@ -119,7 +119,61 @@ namespace ABC_Car_Traders
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[index];
+
+            txtid.Text = selectedRow.Cells[0].Value.ToString();
+            txtbrand.Text = selectedRow.Cells[1].Value.ToString();
+            txtmodel.Text = selectedRow.Cells[2].Value.ToString();
+            comboyear.SelectedItem = selectedRow.Cells[3].Value.ToString();
+            txtprice.Text = selectedRow.Cells[4].Value.ToString();
+            txtstock.Text = selectedRow.Cells[5].Value.ToString();
+            richtxtdescription.Text = selectedRow.Cells[6].Value.ToString();
+            //below is for picture fetch again to picturebox from database
+            int productId = Convert.ToInt32(selectedRow.Cells[0].Value);
+            FetchAndDisplayImage(productId);
+
+        }
+        private void FetchAndDisplayImage(int productId)//Database to fetch car image again to picturebox
+        {
+            // Connection string to your database
+            string connectionString = "Data Source=DELL\\MSSQLSERVER01;Initial Catalog=ABC_Car_Traders;Integrated Security=True";
+
+            // SQL query to fetch the image data
+            string query = "SELECT picture FROM managecars_tbl WHERE id = @ProductID";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ProductID", productId);
+
+                    connection.Open();
+                    byte[] imageData = command.ExecuteScalar() as byte[];
+                    connection.Close();
+
+                    if (imageData != null)
+                    {
+                        pictureBox1.Image = ByteArrayToImage(imageData);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Image not found for the specified Product ID.");
+                    }
+                }
+            }
+        }
+        private Image ByteArrayToImage(byte[] byteArray)//this is also for fetch image 
+        {
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
+            }
         }
     }
 }
