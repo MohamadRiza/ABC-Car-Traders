@@ -29,9 +29,12 @@ namespace ABC_Car_Traders
         
         private void button5_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure do you want Logout?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) 
+            { 
             this.Hide();
             Admin frma = new Admin();
             frma.Show();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
