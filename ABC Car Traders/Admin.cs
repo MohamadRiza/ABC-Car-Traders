@@ -75,7 +75,7 @@ namespace ABC_Car_Traders
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            
+            this.AcceptButton = this.button1;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -87,6 +87,14 @@ namespace ABC_Car_Traders
             else
             {
                 textBox2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
             }
         }
     }

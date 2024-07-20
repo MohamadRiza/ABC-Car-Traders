@@ -78,7 +78,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.managecars_tblTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSetTableAdapters.managecars_tblTableAdapter();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -91,7 +92,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -108,7 +109,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Name = "panel1";
@@ -343,6 +343,7 @@
             this.button7.TabIndex = 38;
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button3
             // 
@@ -368,6 +369,7 @@
             this.button4.TabIndex = 37;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel6
             // 
@@ -575,25 +577,28 @@
             this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.textBox1);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(494, 57);
+            this.panel7.Location = new System.Drawing.Point(467, 57);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(337, 31);
+            this.panel7.Size = new System.Drawing.Size(405, 31);
             this.panel7.TabIndex = 34;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(256, 4);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(325, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 16;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 6);
+            this.textBox1.Location = new System.Drawing.Point(155, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 20);
             this.textBox1.TabIndex = 15;
@@ -604,25 +609,37 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 6);
+            this.label3.Location = new System.Drawing.Point(2, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(152, 16);
             this.label3.TabIndex = 14;
-            this.label3.Text = "UserName:";
+            this.label3.Text = "Search By (Car Brand):";
             // 
             // managecars_tblTableAdapter
             // 
             this.managecars_tblTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox2
+            // button8
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1022, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.button8.BackColor = System.Drawing.Color.Red;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(6, 7);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 32);
+            this.button8.TabIndex = 39;
+            this.button8.Text = "Clear";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Controls.Add(this.button8);
+            this.panel9.Location = new System.Drawing.Point(271, 418);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(88, 47);
+            this.panel9.TabIndex = 39;
             // 
             // ManageCars
             // 
@@ -631,6 +648,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1070, 521);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -660,7 +678,7 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -715,6 +733,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel9;
     }
 }

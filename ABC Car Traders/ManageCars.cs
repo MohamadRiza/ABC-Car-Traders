@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;//1
 using System.Diagnostics;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace ABC_Car_Traders
 {
@@ -24,6 +26,25 @@ namespace ABC_Car_Traders
         private void button6_Click(object sender, EventArgs e)
         {
             Application.ExitThread();
+        }
+        private void loadtable()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM managecars_tbl", con);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            dataGridView1.DataSource = dt;
+        }
+        private void clearTextboxed()
+        {//clear all textboxed + images(picturebox = empty)
+            txtid.Clear();
+            txtbrand.Clear();
+            txtmodel.Clear();
+            comboyear.ResetText();
+            txtprice.Clear();
+            txtstock.Clear();
+            richtxtdescription.Clear();
+            pictureBox1.Image = null;
+            textBox1.Clear();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -51,6 +72,8 @@ namespace ABC_Car_Traders
             panel7.BackColor = Color.FromArgb(185, Color.Black);
             panel7.BackColor = Color.FromArgb(185, Color.Black);
 
+            //this.AcceptButton = this.button1;
+
 
         }
 
@@ -60,10 +83,14 @@ namespace ABC_Car_Traders
             try
             {
                 // Convert image to byte array
-                Image img = pictureBox1.Image;
+                Image img = new Bitmap(pictureBox1.Image);
                 byte[] arr;
-                ImageConverter converter = new ImageConverter();
-                arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                //nnow updated for update db
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    arr = ms.ToArray();
+                }
 
                 // Open the connection
                 con.Open();
@@ -94,13 +121,7 @@ namespace ABC_Car_Traders
 
                 // Show success message
                 MessageBox.Show("Data Inserted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbrand.Clear();
-                txtmodel.Clear();
-                comboyear.ResetText();
-                txtprice.Clear();
-                txtstock.Clear();
-                richtxtdescription.Clear();
-                pictureBox1.Image = null;
+                clearTextboxed();
             }
             catch (Exception ex)
             {
@@ -173,6 +194,128 @@ namespace ABC_Car_Traders
             using (MemoryStream ms = new MemoryStream(byteArray))
             {
                 return Image.FromStream(ms);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {//this code for search button above the datagrid view //search by car brand
+            try
+            {
+                int count = 0;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                string srch = textBox1.Text;
+                cmd.CommandText = "SELECT * FROM managecars_tbl WHERE brand like '%" + srch + "%' " ;
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                count = Convert.ToInt32(dt.Rows.Count.ToString());
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+                if(count == 0)
+                {
+                    MessageBox.Show("Record Not Found!");
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            clearTextboxed();
+            int count = 0;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            string srch = textBox1.Text;
+            cmd.CommandText = "SELECT * FROM managecars_tbl";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            count = Convert.ToInt32(dt.Rows.Count.ToString());
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (pictureBox1.Image == null)
+                {
+                    MessageBox.Show("Please select an image before updating.");
+                    return;
+                }
+
+                Image img = new Bitmap(pictureBox1.Image);
+                byte[] arr;
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    arr = ms.ToArray();
+                }
+
+                con.Open();
+
+                // Parameterized query for updating data
+                SqlCommand cmd = new SqlCommand("UPDATE managecars_tbl SET brand = @brand, model = @model, year = @year, price = @price, stock = @stock, description = @description, picture = @picture WHERE id = @id", con);
+                cmd.Parameters.AddWithValue("@brand", txtbrand.Text);
+                cmd.Parameters.AddWithValue("@model", txtmodel.Text);
+                cmd.Parameters.AddWithValue("@year", comboyear.Text);
+                cmd.Parameters.AddWithValue("@price", txtprice.Text);
+                cmd.Parameters.AddWithValue("@stock", txtstock.Text);
+                cmd.Parameters.AddWithValue("@description", richtxtdescription.Text);
+                cmd.Parameters.AddWithValue("@picture", arr);
+                cmd.Parameters.AddWithValue("@id", txtid.Text);
+
+                cmd.ExecuteNonQuery();
+                loadtable();
+                con.Close();
+                MessageBox.Show("Successfully Updated!");
+
+                clearTextboxed();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure do you want to Delete?", "Delete Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (txtid.Text != "")
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE managecars_tbl WHERE id = '" + int.Parse(txtid.Text) + "'", con);
+                    cmd.ExecuteNonQuery();
+                    loadtable();
+                    MessageBox.Show("Successfully Deleted!");
+                    con.Close();
+                    clearTextboxed();
+                }
+                else
+                {
+                    MessageBox.Show("Datas are not selected!");
+                }
             }
         }
     }

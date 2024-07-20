@@ -65,12 +65,20 @@ namespace ABC_Car_Traders
 
         private void LoginUser_Load(object sender, EventArgs e)
         {
-            
+            AcceptButton = this.button1;
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
         }
     }
 }
