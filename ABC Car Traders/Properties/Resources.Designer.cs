@@ -94,6 +94,16 @@ namespace ABC_Car_Traders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_mike_noga_1916934_3541743 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-mike-noga-1916934-3541743", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_tibszabo_17451088 {
             get {
                 object obj = ResourceManager.GetObject("pexels-tibszabo-17451088", resourceCulture);
@@ -127,6 +137,16 @@ namespace ABC_Car_Traders.Properties {
         internal static System.Drawing.Bitmap wp12988678 {
             get {
                 object obj = ResourceManager.GetObject("wp12988678", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wTQt8m {
+            get {
+                object obj = ResourceManager.GetObject("wTQt8m", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -55,5 +55,25 @@ namespace ABC_Car_Traders
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageParts mpfrm = new ManageParts();
+            mpfrm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageParts mpfrm2 = new ManageParts();
+            mpfrm2.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Settings frmsting = new Settings();
+            frmsting.Show();
+        }
     }
 }

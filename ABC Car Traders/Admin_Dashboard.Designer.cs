@@ -49,6 +49,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -221,6 +222,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Manage Car Parts";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -232,6 +234,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -261,11 +264,12 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.button8);
             this.panel4.Controls.Add(this.button6);
             this.panel4.Controls.Add(this.button5);
             this.panel4.Location = new System.Drawing.Point(5, 55);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(165, 41);
+            this.panel4.Size = new System.Drawing.Size(249, 41);
             this.panel4.TabIndex = 9;
             // 
             // button6
@@ -293,6 +297,19 @@
             this.button5.Text = "Logout";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Black;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(164, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 28);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "Settings";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Admin_Dashboard
             // 
@@ -347,5 +364,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button8;
     }
 }

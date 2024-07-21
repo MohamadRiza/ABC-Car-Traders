@@ -214,7 +214,7 @@ namespace ABC_Car_Traders
                 count = Convert.ToInt32(dt.Rows.Count.ToString());
                 dataGridView1.DataSource = dt;
                 con.Close();
-
+                clearTextboxed();
                 if(count == 0)
                 {
                     MessageBox.Show("Record Not Found!");
@@ -259,7 +259,7 @@ namespace ABC_Car_Traders
             {
                 if (pictureBox1.Image == null)
                 {
-                    MessageBox.Show("Please select an image before updating.");
+                    MessageBox.Show("Please select an image before updating.","Select");
                     return;
                 }
 
@@ -308,7 +308,7 @@ namespace ABC_Car_Traders
                     SqlCommand cmd = new SqlCommand("DELETE managecars_tbl WHERE id = '" + int.Parse(txtid.Text) + "'", con);
                     cmd.ExecuteNonQuery();
                     loadtable();
-                    MessageBox.Show("Successfully Deleted!");
+                    MessageBox.Show("Successfully Deleted!", "Deleted...!");
                     con.Close();
                     clearTextboxed();
                 }

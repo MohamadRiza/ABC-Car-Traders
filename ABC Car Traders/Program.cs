@@ -16,7 +16,7 @@ namespace ABC_Car_Traders
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManageCars());
+            Application.Run(new Admin_Dashboard());
         }
     }
 }
