@@ -72,8 +72,10 @@ namespace ABC_Car_Traders
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Settings frmsting = new Settings();
-            frmsting.Show();
+            if (MessageBox.Show("do you want to change the username and password", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                Settings frmsting = new Settings();
+                frmsting.Show();
+            }
         }
     }
 }

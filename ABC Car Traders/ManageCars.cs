@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using System.Xml.Linq;
 
 namespace ABC_Car_Traders
 {
@@ -80,62 +81,71 @@ namespace ABC_Car_Traders
         private void button3_Click(object sender, EventArgs e)
         {
             //********************** insert ************************************
-            try
-            {
-                // Convert image to byte array
-                Image img = new Bitmap(pictureBox1.Image);
-                byte[] arr;
-                //nnow updated for update db
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    arr = ms.ToArray();
-                }
-
-                // Open the connection
-                con.Open();
-
-                // Create the SQL command
-                SqlCommand cmd = new SqlCommand("INSERT INTO managecars_tbl (brand, model, year, price, stock, description, picture) VALUES (@brand, @model, @year, @price, @stock, @description, @picture)", con);
-
-                // Add parameters
-                cmd.Parameters.AddWithValue("@brand", txtbrand.Text);
-                cmd.Parameters.AddWithValue("@model", txtmodel.Text);
-                cmd.Parameters.AddWithValue("@year", comboyear.Text);
-                cmd.Parameters.AddWithValue("@price", txtprice.Text);
-                cmd.Parameters.AddWithValue("@stock", txtstock.Text);
-                cmd.Parameters.AddWithValue("@description", richtxtdescription.Text);
-                cmd.Parameters.AddWithValue("@picture", arr);
-
-                // Execute the command
-                cmd.ExecuteNonQuery();
-
-                //load all datas to datagrid view
-                SqlCommand cmd2 = new SqlCommand("SELECT * FROM managecars_tbl", con);
-                DataTable dt = new DataTable();
-                dt.Load(cmd2.ExecuteReader());
-                dataGridView1.DataSource = dt;
-
-                // Close the connection
-                con.Close();
-
-                // Show success message
-                MessageBox.Show("Data Inserted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clearTextboxed();
+            if (string.IsNullOrWhiteSpace(txtbrand.Text) || string.IsNullOrEmpty(txtmodel.Text) || string.IsNullOrEmpty(comboyear.Text) || string.IsNullOrEmpty(txtprice.Text) || string.IsNullOrEmpty(txtstock.Text))
+            {//this if else use for make sure text boxes are not empty
+                MessageBox.Show("textboxes are empty!");
             }
-            catch (Exception ex)
+            else
             {
-                // Handle the exception and show error message
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
-            finally
-            {
-                // Ensure the connection is closed
-                if (con.State == ConnectionState.Open)
+
+
+                try
                 {
+                    // Convert image to byte array
+                    Image img = new Bitmap(pictureBox1.Image);
+                    byte[] arr;
+                    //nnow updated for update db
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        arr = ms.ToArray();
+                    }
+
+                    // Open the connection
+                    con.Open();
+
+                    // Create the SQL command
+                    SqlCommand cmd = new SqlCommand("INSERT INTO managecars_tbl (brand, model, year, price, stock, description, picture) VALUES (@brand, @model, @year, @price, @stock, @description, @picture)", con);
+
+                    // Add parameters
+                    cmd.Parameters.AddWithValue("@brand", txtbrand.Text);
+                    cmd.Parameters.AddWithValue("@model", txtmodel.Text);
+                    cmd.Parameters.AddWithValue("@year", comboyear.Text);
+                    cmd.Parameters.AddWithValue("@price", txtprice.Text);
+                    cmd.Parameters.AddWithValue("@stock", txtstock.Text);
+                    cmd.Parameters.AddWithValue("@description", richtxtdescription.Text);
+                    cmd.Parameters.AddWithValue("@picture", arr);
+
+                    // Execute the command
+                    cmd.ExecuteNonQuery();
+
+                    //load all datas to datagrid view
+                    SqlCommand cmd2 = new SqlCommand("SELECT * FROM managecars_tbl", con);
+                    DataTable dt = new DataTable();
+                    dt.Load(cmd2.ExecuteReader());
+                    dataGridView1.DataSource = dt;
+
+                    // Close the connection
                     con.Close();
+
+                    // Show success message
+                    MessageBox.Show("Data Inserted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearTextboxed();
                 }
-            }//END Insert Here
+                catch (Exception ex)
+                {
+                    // Handle the exception and show error message
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Ensure the connection is closed
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Close();
+                    }
+                }//END Insert Here
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

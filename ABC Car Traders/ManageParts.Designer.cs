@@ -33,7 +33,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtcapatability = new System.Windows.Forms.TextBox();
+            this.comboyear = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtmodel = new System.Windows.Forms.TextBox();
             this.richtxtdescription = new System.Windows.Forms.RichTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtstock = new System.Windows.Forms.TextBox();
@@ -63,6 +65,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.partidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbrandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carmodelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.managepartsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aBC_Car_TradersDataSet1 = new ABC_Car_Traders.ABC_Car_TradersDataSet1();
             this.managecarstblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aBC_Car_TradersDataSet = new ABC_Car_Traders.ABC_Car_TradersDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -72,6 +85,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.aBCCarTradersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.managepartsTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet1TableAdapters.managepartsTableAdapter();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -79,12 +94,15 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managepartsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managecarstblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button7
@@ -98,6 +116,7 @@
             this.button7.TabIndex = 38;
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 
@@ -110,11 +129,14 @@
             this.button4.TabIndex = 37;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Controls.Add(this.txtcapatability);
+            this.panel6.Controls.Add(this.comboyear);
+            this.panel6.Controls.Add(this.label13);
+            this.panel6.Controls.Add(this.txtmodel);
             this.panel6.Controls.Add(this.richtxtdescription);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.txtstock);
@@ -128,17 +150,79 @@
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.txtpartid);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(14, 63);
+            this.panel6.Location = new System.Drawing.Point(6, 63);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(269, 402);
+            this.panel6.Size = new System.Drawing.Size(277, 402);
             this.panel6.TabIndex = 46;
             // 
-            // txtcapatability
+            // comboyear
             // 
-            this.txtcapatability.Location = new System.Drawing.Point(111, 142);
-            this.txtcapatability.Name = "txtcapatability";
-            this.txtcapatability.Size = new System.Drawing.Size(148, 20);
-            this.txtcapatability.TabIndex = 43;
+            this.comboyear.FormattingEnabled = true;
+            this.comboyear.Items.AddRange(new object[] {
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030"});
+            this.comboyear.Location = new System.Drawing.Point(50, 184);
+            this.comboyear.Name = "comboyear";
+            this.comboyear.Size = new System.Drawing.Size(79, 21);
+            this.comboyear.TabIndex = 45;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(10, 186);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(39, 16);
+            this.label13.TabIndex = 44;
+            this.label13.Text = "Year:";
+            // 
+            // txtmodel
+            // 
+            this.txtmodel.Location = new System.Drawing.Point(111, 142);
+            this.txtmodel.Name = "txtmodel";
+            this.txtmodel.Size = new System.Drawing.Size(148, 20);
+            this.txtmodel.TabIndex = 43;
             // 
             // richtxtdescription
             // 
@@ -181,9 +265,9 @@
             // 
             // txtprice
             // 
-            this.txtprice.Location = new System.Drawing.Point(111, 182);
+            this.txtprice.Location = new System.Drawing.Point(180, 184);
             this.txtprice.Name = "txtprice";
-            this.txtprice.Size = new System.Drawing.Size(106, 20);
+            this.txtprice.Size = new System.Drawing.Size(79, 20);
             this.txtprice.TabIndex = 38;
             // 
             // label10
@@ -192,7 +276,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(54, 182);
+            this.label10.Location = new System.Drawing.Point(135, 187);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 16);
             this.label10.TabIndex = 37;
@@ -211,11 +295,11 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 146);
+            this.label9.Location = new System.Drawing.Point(22, 146);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 16);
+            this.label9.Size = new System.Drawing.Size(76, 16);
             this.label9.TabIndex = 35;
-            this.label9.Text = "Compatibility:";
+            this.label9.Text = "Car Model:";
             // 
             // label6
             // 
@@ -223,11 +307,11 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(49, 103);
+            this.label6.Location = new System.Drawing.Point(23, 103);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 16);
+            this.label6.Size = new System.Drawing.Size(75, 16);
             this.label6.TabIndex = 33;
-            this.label6.Text = "Brand:";
+            this.label6.Text = "Car Brand:";
             // 
             // txtname
             // 
@@ -242,11 +326,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(50, 59);
+            this.label4.Location = new System.Drawing.Point(20, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 16);
+            this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Name:";
+            this.label4.Text = "Part Name:";
             // 
             // txtpartid
             // 
@@ -290,6 +374,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -304,11 +389,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(2, 7);
+            this.label3.Location = new System.Drawing.Point(0, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 16);
+            this.label3.Size = new System.Drawing.Size(155, 16);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Search By (Car Brand):";
+            this.label3.Text = "Search By (Part Name):";
             // 
             // managecars_tblTableAdapter
             // 
@@ -428,12 +513,92 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.partidDataGridViewTextBoxColumn,
+            this.partnameDataGridViewTextBoxColumn,
+            this.carbrandDataGridViewTextBoxColumn,
+            this.carmodelDataGridViewTextBoxColumn,
+            this.yearDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.stockDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.pictureDataGridViewImageColumn});
+            this.dataGridView1.DataSource = this.managepartsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(475, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 150;
             this.dataGridView1.Size = new System.Drawing.Size(584, 371);
             this.dataGridView1.TabIndex = 42;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // partidDataGridViewTextBoxColumn
+            // 
+            this.partidDataGridViewTextBoxColumn.DataPropertyName = "partid";
+            this.partidDataGridViewTextBoxColumn.HeaderText = "partid";
+            this.partidDataGridViewTextBoxColumn.Name = "partidDataGridViewTextBoxColumn";
+            this.partidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // partnameDataGridViewTextBoxColumn
+            // 
+            this.partnameDataGridViewTextBoxColumn.DataPropertyName = "partname";
+            this.partnameDataGridViewTextBoxColumn.HeaderText = "partname";
+            this.partnameDataGridViewTextBoxColumn.Name = "partnameDataGridViewTextBoxColumn";
+            // 
+            // carbrandDataGridViewTextBoxColumn
+            // 
+            this.carbrandDataGridViewTextBoxColumn.DataPropertyName = "carbrand";
+            this.carbrandDataGridViewTextBoxColumn.HeaderText = "carbrand";
+            this.carbrandDataGridViewTextBoxColumn.Name = "carbrandDataGridViewTextBoxColumn";
+            // 
+            // carmodelDataGridViewTextBoxColumn
+            // 
+            this.carmodelDataGridViewTextBoxColumn.DataPropertyName = "carmodel";
+            this.carmodelDataGridViewTextBoxColumn.HeaderText = "carmodel";
+            this.carmodelDataGridViewTextBoxColumn.Name = "carmodelDataGridViewTextBoxColumn";
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "year";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // stockDataGridViewTextBoxColumn
+            // 
+            this.stockDataGridViewTextBoxColumn.DataPropertyName = "stock";
+            this.stockDataGridViewTextBoxColumn.HeaderText = "stock";
+            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // pictureDataGridViewImageColumn
+            // 
+            this.pictureDataGridViewImageColumn.DataPropertyName = "picture";
+            this.pictureDataGridViewImageColumn.HeaderText = "picture";
+            this.pictureDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
+            this.pictureDataGridViewImageColumn.Width = 200;
+            // 
+            // managepartsBindingSource
+            // 
+            this.managepartsBindingSource.DataMember = "manageparts";
+            this.managepartsBindingSource.DataSource = this.aBC_Car_TradersDataSet1;
+            // 
+            // aBC_Car_TradersDataSet1
+            // 
+            this.aBC_Car_TradersDataSet1.DataSetName = "ABC_Car_TradersDataSet1";
+            this.aBC_Car_TradersDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // managecarstblBindingSource
             // 
@@ -522,6 +687,15 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // aBCCarTradersDataSetBindingSource
+            // 
+            this.aBCCarTradersDataSetBindingSource.DataSource = this.aBC_Car_TradersDataSet;
+            this.aBCCarTradersDataSetBindingSource.Position = 0;
+            // 
+            // managepartsTableAdapter
+            // 
+            this.managepartsTableAdapter.ClearBeforeFill = true;
+            // 
             // ManageParts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,12 +728,15 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managepartsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managecarstblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -605,8 +782,23 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtcapatability;
+        private System.Windows.Forms.TextBox txtmodel;
         private System.Windows.Forms.RichTextBox richtxtdescription;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboyear;
+        private System.Windows.Forms.BindingSource aBCCarTradersDataSetBindingSource;
+        private ABC_Car_TradersDataSet1 aBC_Car_TradersDataSet1;
+        private System.Windows.Forms.BindingSource managepartsBindingSource;
+        private ABC_Car_TradersDataSet1TableAdapters.managepartsTableAdapter managepartsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn partidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn partnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carbrandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carmodelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
     }
 }
