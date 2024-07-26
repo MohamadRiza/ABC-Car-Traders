@@ -56,6 +56,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ABC_Car_TradersDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ABC_Car_TradersDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABC_Car_TradersDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +96,12 @@
     </Compile>
     <Compile Include="ManageCars.Designer.cs">
       <DependentUpon>ManageCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managecustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managecustomer.Designer.cs">
+      <DependentUpon>managecustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageParts.cs">
       <SubType>Form</SubType>
@@ -129,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageCars.resx">
       <DependentUpon>ManageCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managecustomer.resx">
+      <DependentUpon>managecustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageParts.resx">
       <DependentUpon>ManageParts.cs</DependentUpon>
@@ -171,6 +185,17 @@
     <None Include="ABC_Car_TradersDataSet1.xss">
       <DependentUpon>ABC_Car_TradersDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="ABC_Car_TradersDataSet2.xsc">
+      <DependentUpon>ABC_Car_TradersDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ABC_Car_TradersDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABC_Car_TradersDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABC_Car_TradersDataSet2.xss">
+      <DependentUpon>ABC_Car_TradersDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -210,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wTQt8m.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-tdcat-70912.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-wavyvisuals-377312923-18748235.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

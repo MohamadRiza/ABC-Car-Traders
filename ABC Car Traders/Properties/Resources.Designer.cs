@@ -104,9 +104,29 @@ namespace ABC_Car_Traders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_tdcat_70912 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-tdcat-70912", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_tibszabo_17451088 {
             get {
                 object obj = ResourceManager.GetObject("pexels-tibszabo-17451088", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_wavyvisuals_377312923_18748235 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-wavyvisuals-377312923-18748235", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

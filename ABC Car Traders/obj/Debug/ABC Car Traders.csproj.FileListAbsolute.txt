@@ -17,3 +17,4 @@ C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Tr
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.ManageCars.resources
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.ManageParts.resources
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Settings.resources
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.managecustomer.resources

@@ -77,5 +77,19 @@ namespace ABC_Car_Traders
                 frmsting.Show();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            managecustomer frm = new managecustomer();
+            frm.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            managecustomer frm = new managecustomer();
+            frm.Show();
+        }
     }
 }

@@ -40,7 +40,8 @@ namespace ABC_Car_Traders
             txtid.Clear();
             txtbrand.Clear();
             txtmodel.Clear();
-            comboyear.ResetText();
+            //comboyear.ResetText();
+            comboyear.SelectedItem = null;
             txtprice.Clear();
             txtstock.Clear();
             richtxtdescription.Clear();
