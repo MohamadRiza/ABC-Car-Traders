@@ -81,14 +81,14 @@ namespace ABC_Car_Traders
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            managecustomer frm = new managecustomer();
+            VerifyUnamePsswd frm = new VerifyUnamePsswd();
             frm.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            managecustomer frm = new managecustomer();
+            VerifyUnamePsswd frm = new VerifyUnamePsswd();
             frm.Show();
         }
     }

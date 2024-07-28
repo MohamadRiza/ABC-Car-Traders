@@ -42,6 +42,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.combocountry = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
@@ -65,12 +68,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.customertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aBC_Car_TradersDataSet2 = new ABC_Car_Traders.ABC_Car_TradersDataSet2();
-            this.customer_tblTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet2TableAdapters.customer_tblTableAdapter();
-            this.txtpassword = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +76,9 @@
             this.mobileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aBC_Car_TradersDataSet2 = new ABC_Car_Traders.ABC_Car_TradersDataSet2();
+            this.customer_tblTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet2TableAdapters.customer_tblTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -108,11 +108,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(490, 16);
+            this.label7.Location = new System.Drawing.Point(469, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 25);
+            this.label7.Size = new System.Drawing.Size(175, 25);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Manage Cars";
+            this.label7.Text = "Manage Customers";
             // 
             // label5
             // 
@@ -201,6 +201,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -247,6 +248,39 @@
             this.panel6.Size = new System.Drawing.Size(252, 400);
             this.panel6.TabIndex = 43;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(103, 375);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(102, 17);
+            this.checkBox1.TabIndex = 47;
+            this.checkBox1.Tag = "";
+            this.checkBox1.Text = "Show Password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.Location = new System.Drawing.Point(82, 345);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.Size = new System.Drawing.Size(120, 20);
+            this.txtpassword.TabIndex = 46;
+            this.txtpassword.UseSystemPasswordChar = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(5, 346);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(71, 16);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "password:";
+            // 
             // combocountry
             // 
             this.combocountry.FormattingEnabled = true;
@@ -288,6 +322,7 @@
             this.txtmobile.Name = "txtmobile";
             this.txtmobile.Size = new System.Drawing.Size(120, 20);
             this.txtmobile.TabIndex = 41;
+            this.txtmobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmobile_KeyPress);
             // 
             // txtaddress
             // 
@@ -424,6 +459,7 @@
             this.button7.TabIndex = 38;
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button3
             // 
@@ -509,53 +545,6 @@
             this.dataGridView1.TabIndex = 40;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // customertblBindingSource
-            // 
-            this.customertblBindingSource.DataMember = "customer_tbl";
-            this.customertblBindingSource.DataSource = this.aBC_Car_TradersDataSet2;
-            // 
-            // aBC_Car_TradersDataSet2
-            // 
-            this.aBC_Car_TradersDataSet2.DataSetName = "ABC_Car_TradersDataSet2";
-            this.aBC_Car_TradersDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customer_tblTableAdapter
-            // 
-            this.customer_tblTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtpassword
-            // 
-            this.txtpassword.Location = new System.Drawing.Point(82, 345);
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(120, 20);
-            this.txtpassword.TabIndex = 46;
-            this.txtpassword.UseSystemPasswordChar = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(5, 346);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 16);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "password:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(103, 375);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 17);
-            this.checkBox1.TabIndex = 47;
-            this.checkBox1.Tag = "";
-            this.checkBox1.Text = "Show Password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // cidDataGridViewTextBoxColumn
             // 
             this.cidDataGridViewTextBoxColumn.DataPropertyName = "cid";
@@ -604,6 +593,20 @@
             this.password.DataPropertyName = "password";
             this.password.HeaderText = "password";
             this.password.Name = "password";
+            // 
+            // customertblBindingSource
+            // 
+            this.customertblBindingSource.DataMember = "customer_tbl";
+            this.customertblBindingSource.DataSource = this.aBC_Car_TradersDataSet2;
+            // 
+            // aBC_Car_TradersDataSet2
+            // 
+            this.aBC_Car_TradersDataSet2.DataSetName = "ABC_Car_TradersDataSet2";
+            this.aBC_Car_TradersDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customer_tblTableAdapter
+            // 
+            this.customer_tblTableAdapter.ClearBeforeFill = true;
             // 
             // managecustomer
             // 

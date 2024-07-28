@@ -41,6 +41,13 @@ namespace ABC_Car_Traders
             txtpassword.Clear();
             checkBox1.Checked = false; //remove chacked chackbox
         }
+        private void loadtable()
+        {
+            SqlCommand cmd2 = new SqlCommand("SELECT * FROM customer_tbl", con);
+            DataTable dt = new DataTable();
+            dt.Load(cmd2.ExecuteReader());
+            dataGridView1.DataSource = dt;
+        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -87,6 +94,7 @@ namespace ABC_Car_Traders
             txtpassword.Text = selectedRow.Cells[7].Value.ToString();
 
             
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -121,10 +129,7 @@ namespace ABC_Car_Traders
                     cmd.ExecuteNonQuery();
 
                     //load all datas to datagrid view
-                    SqlCommand cmd2 = new SqlCommand("SELECT * FROM customer_tbl", con);
-                    DataTable dt = new DataTable();
-                    dt.Load(cmd2.ExecuteReader());
-                    dataGridView1.DataSource = dt;
+                    loadtable();
 
                     // Close the connection
                     con.Close();
@@ -159,11 +164,115 @@ namespace ABC_Car_Traders
             {
                 txtpassword.UseSystemPasswordChar = true;
             }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtid.Text))
+            {
+                MessageBox.Show("Select a Customer", "ID is not be Empty!");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
 
+                    // Parameterized query for updating data
+                    SqlCommand cmd = new SqlCommand("UPDATE customer_tbl SET fullname = @fullname, country = @country, city = @city, address = @address, mobile = @mobile, email = @email, password = @password WHERE cid = @cid", con);
+
+                    cmd.Parameters.AddWithValue("@fullname", txtcname.Text);
+                    cmd.Parameters.AddWithValue("@country", combocountry.Text);
+                    cmd.Parameters.AddWithValue("@city", txtcity.Text);
+                    cmd.Parameters.AddWithValue("@address", txtaddress.Text);
+                    cmd.Parameters.AddWithValue("@mobile", txtmobile.Text);
+                    cmd.Parameters.AddWithValue("@email", txtemail.Text);
+                    cmd.Parameters.AddWithValue("@password", txtpassword.Text);
+                    cmd.Parameters.AddWithValue("@cid", txtid.Text);
+
+                    cmd.ExecuteNonQuery();
+                    loadtable();
+                    con.Close();
+                    MessageBox.Show("Successfully Updated!");
+
+                    cleartextboxes();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Close();
+                    }
+                }
+            }
+        }
+
+        private void txtmobile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '+';
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtid.Text))
+            {
+                MessageBox.Show("text boxes are empty!", "ID requeired");
+            }
+            else
+            {
+                if (MessageBox.Show("Are you sure do you want to delete this customer?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand("DELETE customer_tbl WHERE cid = '" + int.Parse(txtid.Text) + "'", con);
+                        cmd.ExecuteNonQuery();
+                        loadtable();
+                        MessageBox.Show("Successfully Deleted", "Deleted...!");
+                        con.Close();
+                        cleartextboxes();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error" + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int count = 0;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                string srch = textBox1.Text;
+                cmd.CommandText = "SELECT * FROM customer_tbl WHERE fullname like '%" + srch + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                count = Convert.ToInt32(dt.Rows.Count.ToString());
+                dataGridView1.DataSource = dt;
+                con.Close();
+                cleartextboxes();
+                if (count == 0)
+                {
+                    MessageBox.Show("Record Not Found!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
         }
     }
 }

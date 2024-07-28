@@ -80,5 +80,10 @@ namespace ABC_Car_Traders
                 button1.PerformClick();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

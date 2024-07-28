@@ -123,6 +123,12 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerifyUnamePsswd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyUnamePsswd.Designer.cs">
+      <DependentUpon>VerifyUnamePsswd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyUnamePsswd.resx">
+      <DependentUpon>VerifyUnamePsswd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ABC_Car_TradersDataSet.xsc">
       <DependentUpon>ABC_Car_TradersDataSet.xsd</DependentUpon>
