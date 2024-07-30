@@ -73,6 +73,12 @@
     <Compile Include="Admin_Dashboard.Designer.cs">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerLoginDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerLoginDashboard.Designer.cs">
+      <DependentUpon>CustomerLoginDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerLoginDashboard.resx">
+      <DependentUpon>CustomerLoginDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegister.resx">
       <DependentUpon>CustomerRegister.cs</DependentUpon>
@@ -250,6 +259,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pexels-wavyvisuals-377312923-18748235.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-esmihel-15200697.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-wavyvisuals-377312923-18748231.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

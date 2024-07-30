@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,6 @@ namespace ABC_Car_Traders
         {
             InitializeComponent();
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -80,10 +80,33 @@ namespace ABC_Car_Traders
                 button1.PerformClick();
             }
         }
-
+        public static string welcomeuser = ""; //get username textbox to user dashboard 1
         private void button1_Click(object sender, EventArgs e)
         {
+            string connectionString = "Data Source=DELL\\MSSQLSERVER01;Initial Catalog=ABC_Car_Traders;Integrated Security=True";
+            string query = "SELECT COUNT(1) FROM dbo.customer_tbl WHERE email=@Username AND password=@Password";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Username", textBox1.Text);
+                command.Parameters.AddWithValue("@Password", textBox2.Text);
 
+                connection.Open();
+                int result = (int)command.ExecuteScalar();
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Welcome back", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    welcomeuser = textBox1.Text; //get username textbox to user dashboard 2
+                    this.Hide();
+                    CustomerLoginDashboard cdb = new CustomerLoginDashboard();
+                    cdb.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Username or password is incorrect.");
+                }
+            }
         }
     }
 }
