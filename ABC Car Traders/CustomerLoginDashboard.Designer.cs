@@ -171,7 +171,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 34);
             this.button3.TabIndex = 14;
-            this.button3.Text = "Manage Customer";
+            this.button3.Text = "Order Status";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
@@ -193,7 +193,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 34);
             this.button2.TabIndex = 12;
-            this.button2.Text = "Manage Car Parts";
+            this.button2.Text = "Car Parts";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
@@ -226,7 +226,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 34);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Manage Car";
+            this.button1.Text = "Cars";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // panel4

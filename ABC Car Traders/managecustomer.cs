@@ -23,6 +23,9 @@ namespace ABC_Car_Traders
 
         private void managecustomer_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet6.country_For_Combobox' table. You can move, or remove it, as needed.
+            this.country_For_ComboboxTableAdapter.Fill(this.aBC_Car_TradersDataSet6.country_For_Combobox);
+            // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet5.country_For_Combobox' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet2.customer_tbl' table. You can move, or remove it, as needed.
             this.customer_tblTableAdapter.Fill(this.aBC_Car_TradersDataSet2.customer_tbl);
             panel6.BackColor = Color.FromArgb(185, Color.Black);
@@ -86,7 +89,7 @@ namespace ABC_Car_Traders
 
             txtid.Text = selectedRow.Cells[0].Value.ToString();
             txtcname.Text = selectedRow.Cells[1].Value.ToString();
-            combocountry.SelectedItem = selectedRow.Cells[2].Value.ToString();
+            combocountry.Text = selectedRow.Cells[2].Value.ToString();
             txtcity.Text = selectedRow.Cells[3].Value.ToString();
             txtaddress.Text = selectedRow.Cells[4].Value.ToString();
             txtmobile.Text = selectedRow.Cells[5].Value.ToString();

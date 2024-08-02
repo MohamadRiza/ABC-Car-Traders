@@ -45,7 +45,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.combocountry = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtmobile = new System.Windows.Forms.TextBox();
@@ -79,6 +78,11 @@
             this.customertblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aBC_Car_TradersDataSet2 = new ABC_Car_Traders.ABC_Car_TradersDataSet2();
             this.customer_tblTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet2TableAdapters.customer_tblTableAdapter();
+            this.aBC_Car_TradersDataSet5 = new ABC_Car_Traders.ABC_Car_TradersDataSet5();
+            this.combocountry = new System.Windows.Forms.ComboBox();
+            this.aBC_Car_TradersDataSet6 = new ABC_Car_Traders.ABC_Car_TradersDataSet6();
+            this.countryForComboboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.country_For_ComboboxTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet6TableAdapters.country_For_ComboboxTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -89,6 +93,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customertblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryForComboboxBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -225,10 +232,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Controls.Add(this.combocountry);
             this.panel6.Controls.Add(this.checkBox1);
             this.panel6.Controls.Add(this.txtpassword);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.combocountry);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.txtemail);
             this.panel6.Controls.Add(this.txtmobile);
@@ -280,22 +287,6 @@
             this.label14.Size = new System.Drawing.Size(71, 16);
             this.label14.TabIndex = 45;
             this.label14.Text = "password:";
-            // 
-            // combocountry
-            // 
-            this.combocountry.FormattingEnabled = true;
-            this.combocountry.Items.AddRange(new object[] {
-            "Australia",
-            "Austria",
-            "Belgium",
-            "China",
-            "Chicago - United States",
-            "England - United Kingdom",
-            "Sri Lanka"});
-            this.combocountry.Location = new System.Drawing.Point(82, 146);
-            this.combocountry.Name = "combocountry";
-            this.combocountry.Size = new System.Drawing.Size(120, 21);
-            this.combocountry.TabIndex = 44;
             // 
             // label13
             // 
@@ -608,6 +599,35 @@
             // 
             this.customer_tblTableAdapter.ClearBeforeFill = true;
             // 
+            // aBC_Car_TradersDataSet5
+            // 
+            this.aBC_Car_TradersDataSet5.DataSetName = "ABC_Car_TradersDataSet5";
+            this.aBC_Car_TradersDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // combocountry
+            // 
+            this.combocountry.DataSource = this.countryForComboboxBindingSource;
+            this.combocountry.DisplayMember = "country";
+            this.combocountry.FormattingEnabled = true;
+            this.combocountry.Location = new System.Drawing.Point(83, 146);
+            this.combocountry.Name = "combocountry";
+            this.combocountry.Size = new System.Drawing.Size(119, 21);
+            this.combocountry.TabIndex = 48;
+            // 
+            // aBC_Car_TradersDataSet6
+            // 
+            this.aBC_Car_TradersDataSet6.DataSetName = "ABC_Car_TradersDataSet6";
+            this.aBC_Car_TradersDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // countryForComboboxBindingSource
+            // 
+            this.countryForComboboxBindingSource.DataMember = "country_For_Combobox";
+            this.countryForComboboxBindingSource.DataSource = this.aBC_Car_TradersDataSet6;
+            // 
+            // country_For_ComboboxTableAdapter
+            // 
+            this.country_For_ComboboxTableAdapter.ClearBeforeFill = true;
+            // 
             // managecustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,6 +662,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customertblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryForComboboxBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -683,7 +706,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox combocountry;
         private ABC_Car_TradersDataSet2 aBC_Car_TradersDataSet2;
         private System.Windows.Forms.BindingSource customertblBindingSource;
         private ABC_Car_TradersDataSet2TableAdapters.customer_tblTableAdapter customer_tblTableAdapter;
@@ -698,5 +720,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mobileDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private ABC_Car_TradersDataSet5 aBC_Car_TradersDataSet5;
+        private System.Windows.Forms.ComboBox combocountry;
+        private ABC_Car_TradersDataSet6 aBC_Car_TradersDataSet6;
+        private System.Windows.Forms.BindingSource countryForComboboxBindingSource;
+        private ABC_Car_TradersDataSet6TableAdapters.country_For_ComboboxTableAdapter country_For_ComboboxTableAdapter;
     }
 }

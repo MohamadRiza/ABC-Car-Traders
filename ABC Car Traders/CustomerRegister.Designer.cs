@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button5 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -59,10 +60,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.aBC_Car_TradersDataSet4 = new ABC_Car_Traders.ABC_Car_TradersDataSet4();
+            this.countryForComboboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.country_For_ComboboxTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet4TableAdapters.country_For_ComboboxTableAdapter();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryForComboboxBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -301,16 +307,9 @@
             // combocountry
             // 
             this.combocountry.AccessibleName = "";
-            this.combocountry.DisplayMember = "one";
+            this.combocountry.DataSource = this.countryForComboboxBindingSource;
+            this.combocountry.DisplayMember = "country";
             this.combocountry.FormattingEnabled = true;
-            this.combocountry.Items.AddRange(new object[] {
-            "Australia",
-            "Austria",
-            "Belgium",
-            "China",
-            "Chicago - United States",
-            "England - United Kingdom",
-            "Sri Lanka"});
             this.combocountry.Location = new System.Drawing.Point(108, 126);
             this.combocountry.Name = "combocountry";
             this.combocountry.Size = new System.Drawing.Size(164, 21);
@@ -423,6 +422,20 @@
             this.panel1.Size = new System.Drawing.Size(773, 49);
             this.panel1.TabIndex = 4;
             // 
+            // aBC_Car_TradersDataSet4
+            // 
+            this.aBC_Car_TradersDataSet4.DataSetName = "ABC_Car_TradersDataSet4";
+            this.aBC_Car_TradersDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // countryForComboboxBindingSource
+            // 
+            this.countryForComboboxBindingSource.DataMember = "country_For_Combobox";
+            this.countryForComboboxBindingSource.DataSource = this.aBC_Car_TradersDataSet4;
+            // 
+            // country_For_ComboboxTableAdapter
+            // 
+            this.country_For_ComboboxTableAdapter.ClearBeforeFill = true;
+            // 
             // CustomerRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,6 +459,8 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryForComboboxBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,5 +498,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox txtpassword;
+        private ABC_Car_TradersDataSet4 aBC_Car_TradersDataSet4;
+        private System.Windows.Forms.BindingSource countryForComboboxBindingSource;
+        private ABC_Car_TradersDataSet4TableAdapters.country_For_ComboboxTableAdapter country_For_ComboboxTableAdapter;
     }
 }
