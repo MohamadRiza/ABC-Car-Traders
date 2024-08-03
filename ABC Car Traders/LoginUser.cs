@@ -81,6 +81,7 @@ namespace ABC_Car_Traders
             }
         }
         public static string welcomeuser = ""; //get username textbox to user dashboard 1
+        public static string textboxfetchpassword = ""; // get password textbox to user userprofilepage/usersettings
         private void button1_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=DELL\\MSSQLSERVER01;Initial Catalog=ABC_Car_Traders;Integrated Security=True";
@@ -98,6 +99,7 @@ namespace ABC_Car_Traders
                 {
                     MessageBox.Show("Welcome back", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     welcomeuser = textBox1.Text; //get username textbox to user dashboard 2
+                    textboxfetchpassword = textBox2.Text; // get password textbox to user userprofilepage/usersettings
                     this.Hide();
                     CustomerLoginDashboard cdb = new CustomerLoginDashboard();
                     cdb.Show();

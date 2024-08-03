@@ -45,7 +45,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -149,8 +148,9 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(109, 34);
             this.button4.TabIndex = 14;
-            this.button4.Text = "Manage Customer Orders";
+            this.button4.Text = "Profile";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox4
             // 
@@ -162,6 +162,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // button3
             // 
@@ -226,32 +227,19 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 34);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Cars";
+            this.button1.Text = "Buy a Cars";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.button8);
             this.panel4.Controls.Add(this.button6);
             this.panel4.Controls.Add(this.button5);
             this.panel4.Location = new System.Drawing.Point(5, 53);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(249, 41);
+            this.panel4.Size = new System.Drawing.Size(166, 41);
             this.panel4.TabIndex = 11;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Black;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(164, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 28);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "Settings";
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
@@ -343,7 +331,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label2;

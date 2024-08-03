@@ -20,3 +20,4 @@ C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Tr
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.managecustomer.resources
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.VerifyUnamePsswd.resources
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.CustomerLoginDashboard.resources
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.CustomerProfileinDshBD.resources

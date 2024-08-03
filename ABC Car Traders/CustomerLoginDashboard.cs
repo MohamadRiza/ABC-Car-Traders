@@ -42,5 +42,19 @@ namespace ABC_Car_Traders
         {
             
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerProfileinDshBD frmc = new CustomerProfileinDshBD();
+            frmc.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerProfileinDshBD frmc = new CustomerProfileinDshBD();
+            frmc.Show();
+        }
     }
 }
