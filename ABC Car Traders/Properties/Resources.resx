@@ -118,14 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="wp12988678" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wp12988678.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo-1493238792000-8113da705763" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo-1493238792000-8113da705763.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-wavyvisuals-377312923-18748235" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-wavyvisuals-377312923-18748235.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pexels-esmihel-15200697" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-esmihel-15200697.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pexels-tibszabo-17451088" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-tibszabo-17451088.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wTQt8m" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wTQt8m.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,28 +130,37 @@
   <data name="front-view-dark-silhouette-of-a-modern-luxury-black-car-isolated-on-black-background-ai-generated-free-photo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\front-view-dark-silhouette-of-a-modern-luxury-black-car-isolated-on-black-background-ai-generated-free-photo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pexels-mike-noga-1916934-3541743" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-mike-noga-1916934-3541743.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Online-Vehicle-Showroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Online-Vehicle-Showroom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wp12988678" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wp12988678.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-esmihel-152006971" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-esmihel-152006971.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-esmihel-15200697" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-esmihel-15200697.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-wavyvisuals-377312923-18748235" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-wavyvisuals-377312923-18748235.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-tdcat-70912" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-tdcat-70912.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-wavyvisuals-377312923-18748231" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-wavyvisuals-377312923-18748231.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pngtree-modern-double-color-futuristic-neon-background-image_351866" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car-showroom-interiors" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car-showroom-interiors.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-tibszabo-17451088" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-tibszabo-17451088.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="photo-1493238792000-8113da705763" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo-1493238792000-8113da705763.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Online-Vehicle-Showroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Online-Vehicle-Showroom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pexels-tdcat-70912" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-tdcat-70912.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pexels-mike-noga-1916934-3541743" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-mike-noga-1916934-3541743.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pexels-wavyvisuals-377312923-18748231" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-wavyvisuals-377312923-18748231.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pexels-wavyvisuals-377312923-18748244" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-wavyvisuals-377312923-18748244.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

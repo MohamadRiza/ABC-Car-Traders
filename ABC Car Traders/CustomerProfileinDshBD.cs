@@ -75,6 +75,10 @@ namespace ABC_Car_Traders
             password.Text = LoginUser.textboxfetchpassword;
             confirmpaswd.Text = LoginUser.textboxfetchpassword;
 
+            panel5.BackColor = Color.FromArgb(185, Color.Black);
+            panel3.BackColor = Color.FromArgb(185, Color.Black);
+            combocountry.SelectedItem = null;
+
             fetchdatatotextbox();
         }
 
@@ -92,30 +96,36 @@ namespace ABC_Car_Traders
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(usrname.Text) || string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(confirmpaswd.Text))
+            if(MessageBox.Show("Username/Password changes after logges out are you sure do you want to change?","Question",MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                MessageBox.Show("textbox Empty Please fill!", "Empty!");
-            }
-            else
-            {
-                try
+                if (string.IsNullOrEmpty(usrname.Text) || string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(confirmpaswd.Text))
                 {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("update customer_tbl set email = @email, password = @password where email = @Wemail and password = @Wpassword", con);
-                    cmd.Parameters.AddWithValue("@email", usrname.Text);
-                    cmd.Parameters.AddWithValue("@password", confirmpaswd.Text);
-                    cmd.Parameters.AddWithValue("@Wemail", LoginUser.welcomeuser);
-                    cmd.Parameters.AddWithValue("@Wpassword", LoginUser.textboxfetchpassword);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Username/password changed Successfully!", "Success");
-                    usrname.Clear();
-                    password.Clear();
-                    confirmpaswd.Clear();
+                    MessageBox.Show("textbox Empty Please fill!", "Empty!");
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error" + ex.Message);
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand("update customer_tbl set email = @email, password = @password where email = @Wemail and password = @Wpassword", con);
+                        cmd.Parameters.AddWithValue("@email", usrname.Text);
+                        cmd.Parameters.AddWithValue("@password", confirmpaswd.Text);
+                        cmd.Parameters.AddWithValue("@Wemail", LoginUser.welcomeuser);
+                        cmd.Parameters.AddWithValue("@Wpassword", LoginUser.textboxfetchpassword);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Username/password changed Successfully!", "Success");
+                        usrname.Clear();
+                        password.Clear();
+                        confirmpaswd.Clear();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error" + ex.Message);
+                    }
+                    this.Hide();
+                    LoginUser frmu = new LoginUser();
+                    frmu.Show();
                 }
             }
         }

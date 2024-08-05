@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerProfileinDshBD));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,30 +51,30 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtfname = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtcity = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtaddress = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.combocountry = new System.Windows.Forms.ComboBox();
+            this.countryForComboboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aBC_Car_TradersDataSet7 = new ABC_Car_Traders.ABC_Car_TradersDataSet7();
             this.txtmobile = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.combocountry = new System.Windows.Forms.ComboBox();
-            this.aBC_Car_TradersDataSet7 = new ABC_Car_Traders.ABC_Car_TradersDataSet7();
-            this.countryForComboboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtcity = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtfname = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.country_For_ComboboxTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet7TableAdapters.country_For_ComboboxTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countryForComboboxBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -324,85 +325,64 @@
             this.panel5.Size = new System.Drawing.Size(264, 318);
             this.panel5.TabIndex = 43;
             // 
-            // label9
+            // button4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(59, 19);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(156, 20);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "Change Delivery Details";
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(16, 273);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 28);
+            this.button4.TabIndex = 56;
+            this.button4.Text = "Reload";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // txtfname
+            // button3
             // 
-            this.txtfname.Location = new System.Drawing.Point(95, 74);
-            this.txtfname.Name = "txtfname";
-            this.txtfname.Size = new System.Drawing.Size(154, 20);
-            this.txtfname.TabIndex = 46;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(95, 273);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 28);
+            this.button3.TabIndex = 55;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label10
+            // button2
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(13, 74);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 16);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Fullname:";
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(174, 273);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 28);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "Update";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label11
+            // combocountry
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(24, 114);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 16);
-            this.label11.TabIndex = 47;
-            this.label11.Text = "Country:";
+            this.combocountry.DataSource = this.countryForComboboxBindingSource;
+            this.combocountry.DisplayMember = "country";
+            this.combocountry.FormattingEnabled = true;
+            this.combocountry.Location = new System.Drawing.Point(95, 114);
+            this.combocountry.Name = "combocountry";
+            this.combocountry.Size = new System.Drawing.Size(154, 21);
+            this.combocountry.TabIndex = 44;
             // 
-            // txtcity
+            // countryForComboboxBindingSource
             // 
-            this.txtcity.Location = new System.Drawing.Point(95, 155);
-            this.txtcity.Name = "txtcity";
-            this.txtcity.Size = new System.Drawing.Size(154, 20);
-            this.txtcity.TabIndex = 50;
+            this.countryForComboboxBindingSource.DataMember = "country_For_Combobox";
+            this.countryForComboboxBindingSource.DataSource = this.aBC_Car_TradersDataSet7;
             // 
-            // label12
+            // aBC_Car_TradersDataSet7
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(49, 155);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 16);
-            this.label12.TabIndex = 49;
-            this.label12.Text = "City:";
-            // 
-            // txtaddress
-            // 
-            this.txtaddress.Location = new System.Drawing.Point(95, 196);
-            this.txtaddress.Name = "txtaddress";
-            this.txtaddress.Size = new System.Drawing.Size(154, 20);
-            this.txtaddress.TabIndex = 52;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(23, 196);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 16);
-            this.label14.TabIndex = 51;
-            this.label14.Text = "Address:";
+            this.aBC_Car_TradersDataSet7.DataSetName = "ABC_Car_TradersDataSet7";
+            this.aBC_Car_TradersDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtmobile
             // 
@@ -424,74 +404,97 @@
             this.label15.TabIndex = 53;
             this.label15.Text = "Mobile:";
             // 
-            // combocountry
+            // txtaddress
             // 
-            this.combocountry.DataSource = this.countryForComboboxBindingSource;
-            this.combocountry.DisplayMember = "country";
-            this.combocountry.FormattingEnabled = true;
-            this.combocountry.Location = new System.Drawing.Point(95, 114);
-            this.combocountry.Name = "combocountry";
-            this.combocountry.Size = new System.Drawing.Size(154, 21);
-            this.combocountry.TabIndex = 44;
+            this.txtaddress.Location = new System.Drawing.Point(95, 196);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.Size = new System.Drawing.Size(154, 20);
+            this.txtaddress.TabIndex = 52;
             // 
-            // aBC_Car_TradersDataSet7
+            // label14
             // 
-            this.aBC_Car_TradersDataSet7.DataSetName = "ABC_Car_TradersDataSet7";
-            this.aBC_Car_TradersDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(23, 196);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 16);
+            this.label14.TabIndex = 51;
+            this.label14.Text = "Address:";
             // 
-            // countryForComboboxBindingSource
+            // txtcity
             // 
-            this.countryForComboboxBindingSource.DataMember = "country_For_Combobox";
-            this.countryForComboboxBindingSource.DataSource = this.aBC_Car_TradersDataSet7;
+            this.txtcity.Location = new System.Drawing.Point(95, 155);
+            this.txtcity.Name = "txtcity";
+            this.txtcity.Size = new System.Drawing.Size(154, 20);
+            this.txtcity.TabIndex = 50;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(49, 155);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 16);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "City:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(24, 114);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 16);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "Country:";
+            // 
+            // txtfname
+            // 
+            this.txtfname.Location = new System.Drawing.Point(95, 74);
+            this.txtfname.Name = "txtfname";
+            this.txtfname.Size = new System.Drawing.Size(154, 20);
+            this.txtfname.TabIndex = 46;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(13, 74);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 16);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Fullname:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(59, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(156, 20);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Change Delivery Details";
             // 
             // country_For_ComboboxTableAdapter
             // 
             this.country_For_ComboboxTableAdapter.ClearBeforeFill = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(174, 273);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(95, 273);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 28);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(16, 273);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 28);
-            this.button4.TabIndex = 56;
-            this.button4.Text = "Reload";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // CustomerProfileinDshBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -512,8 +515,8 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countryForComboboxBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet7)).EndInit();
             this.ResumeLayout(false);
 
         }

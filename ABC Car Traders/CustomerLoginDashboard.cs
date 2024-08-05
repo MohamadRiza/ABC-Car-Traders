@@ -56,5 +56,19 @@ namespace ABC_Car_Traders
             CustomerProfileinDshBD frmc = new CustomerProfileinDshBD();
             frmc.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BuyaCarasACustomer bcfrm = new BuyaCarasACustomer();
+            bcfrm.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BuyaCarasACustomer bcfrm = new BuyaCarasACustomer();
+            bcfrm.Show();
+        }
     }
 }

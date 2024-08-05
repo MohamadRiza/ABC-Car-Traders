@@ -36,6 +36,28 @@ namespace ABC_Car_Traders
             txtcountry.Clear();
         }
 
+        private void fetchdatatotextbox()
+        {//this is for fetch datas to textbox customerprogiledashBD >>>>> Change Delivery Details PANEL
+            try
+            {
+                con.Open();
+                SqlCommand cmd2 = new SqlCommand("select username, password from Admin_Login", con);
+                SqlDataReader DR = cmd2.ExecuteReader();
+                if (DR.Read())
+                {
+                    usrname.Text = DR["username"].ToString();
+                    password.Text = DR["password"].ToString();
+                    confirmpaswd.Text = DR["password"].ToString();
+                }
+                DR.Close();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -59,35 +81,41 @@ namespace ABC_Car_Traders
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(password.Text) || string.IsNullOrWhiteSpace(confirmpaswd.Text))
+            if (MessageBox.Show("Username/Password changes after logges out are you sure do you want to change?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                MessageBox.Show("Password and Confirm Password fields cannot be empty.", "Input Required");
-            }
-            else if (password.Text == confirmpaswd.Text)
-            {
-                MessageBox.Show("Password Updated successfully.", "Success");
-
-                try
+                if (string.IsNullOrWhiteSpace(password.Text) || string.IsNullOrWhiteSpace(confirmpaswd.Text))
                 {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("UPDATE Admin_Login SET username = @usernametxt, password = @passwordtxt", con);
-                    cmd.Parameters.AddWithValue("passwordtxt", confirmpaswd.Text);
-                    cmd.Parameters.AddWithValue("usernametxt", usrname.Text);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-
-                    usrname.Clear();
-                    password.Clear();
-                    confirmpaswd.Clear();
+                    MessageBox.Show("Password and Confirm Password fields cannot be empty.", "Input Required");
                 }
-                catch(Exception ex)
+                else if (password.Text == confirmpaswd.Text)
                 {
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Password Updated successfully.", "Success");
+
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand("UPDATE Admin_Login SET username = @usernametxt, password = @passwordtxt", con);
+                        cmd.Parameters.AddWithValue("passwordtxt", confirmpaswd.Text);
+                        cmd.Parameters.AddWithValue("usernametxt", usrname.Text);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+
+                        usrname.Clear();
+                        password.Clear();
+                        confirmpaswd.Clear();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error" + ex);
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Check password and Confirm Password. They do not match.", "Not Matching");
+                else
+                {
+                    MessageBox.Show("Check password and Confirm Password. They do not match.", "Not Matching");
+                }
+                this.Hide();
+                Admin frm = new Admin();
+                frm.Show();
             }
         }
 
@@ -123,6 +151,9 @@ namespace ABC_Car_Traders
             this.country_For_ComboboxTableAdapter.Fill(this.aBC_Car_TradersDataSet3.country_For_Combobox);
             panel6.BackColor = Color.FromArgb(185, Color.Black);
             panel7.BackColor = Color.FromArgb(185, Color.Black);
+
+            fetchdatatotextbox();
+
         }
 
         private void button6_Click_1(object sender, EventArgs e)

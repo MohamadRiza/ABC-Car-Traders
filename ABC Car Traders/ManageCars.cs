@@ -171,6 +171,7 @@ namespace ABC_Car_Traders
             FetchAndDisplayImage(productId);
 
         }
+        
         private void FetchAndDisplayImage(int productId)//Database to fetch car image again to picturebox
         {
             // Connection string to your database
@@ -328,6 +329,11 @@ namespace ABC_Car_Traders
                     MessageBox.Show("Datas are not selected!");
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
