@@ -61,6 +61,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ABC_Car_TradersDataSet101.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ABC_Car_TradersDataSet111.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABC_Car_TradersDataSet111.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABC_Car_TradersDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABC_Car_TradersDataSet12.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ABC_Car_TradersDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,11 +129,23 @@
     <Compile Include="BuyaCarasACustomer.Designer.cs">
       <DependentUpon>BuyaCarasACustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyACarPartasACustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyACarPartasACustomer.Designer.cs">
+      <DependentUpon>BuyACarPartasACustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuycarsClickCarDGV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BuycarsClickCarDGV.Designer.cs">
       <DependentUpon>BuycarsClickCarDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyPartsClickPartsDGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyPartsClickPartsDGV.Designer.cs">
+      <DependentUpon>BuyPartsClickPartsDGV.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerLoginDashboard.cs">
       <SubType>Form</SubType>
@@ -202,8 +224,14 @@
     <EmbeddedResource Include="BuyaCarasACustomer.resx">
       <DependentUpon>BuyaCarasACustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuyACarPartasACustomer.resx">
+      <DependentUpon>BuyACarPartasACustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuycarsClickCarDGV.resx">
       <DependentUpon>BuycarsClickCarDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyPartsClickPartsDGV.resx">
+      <DependentUpon>BuyPartsClickPartsDGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerLoginDashboard.resx">
       <DependentUpon>CustomerLoginDashboard.cs</DependentUpon>
@@ -280,6 +308,28 @@
     </None>
     <None Include="ABC_Car_TradersDataSet101.xss">
       <DependentUpon>ABC_Car_TradersDataSet101.xsd</DependentUpon>
+    </None>
+    <None Include="ABC_Car_TradersDataSet111.xsc">
+      <DependentUpon>ABC_Car_TradersDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="ABC_Car_TradersDataSet111.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABC_Car_TradersDataSet111.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABC_Car_TradersDataSet111.xss">
+      <DependentUpon>ABC_Car_TradersDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="ABC_Car_TradersDataSet12.xsc">
+      <DependentUpon>ABC_Car_TradersDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ABC_Car_TradersDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABC_Car_TradersDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABC_Car_TradersDataSet12.xss">
+      <DependentUpon>ABC_Car_TradersDataSet12.xsd</DependentUpon>
     </None>
     <None Include="ABC_Car_TradersDataSet2.xsc">
       <DependentUpon>ABC_Car_TradersDataSet2.xsd</DependentUpon>
@@ -426,6 +476,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pexels-wavyvisuals-377312923-18748244.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-esmihel-15097786.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

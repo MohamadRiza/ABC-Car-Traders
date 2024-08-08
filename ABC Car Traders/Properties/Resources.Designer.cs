@@ -94,6 +94,16 @@ namespace ABC_Car_Traders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_esmihel_15097786 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-esmihel-15097786", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_esmihel_15200697 {
             get {
                 object obj = ResourceManager.GetObject("pexels-esmihel-15200697", resourceCulture);

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;//1
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace ABC_Car_Traders
 {
@@ -35,8 +36,8 @@ namespace ABC_Car_Traders
                 DataTable dt = new DataTable();
                 dt.Columns.Add("brand", typeof(string));
                 dt.Load(reader);
-                comboBox1.ValueMember = "brand";
-                comboBox1.DataSource = dt;
+                combobrand.ValueMember = "brand";
+                combobrand.DataSource = dt;
                 con.Close();
             }
             catch (Exception ex)
@@ -55,8 +56,8 @@ namespace ABC_Car_Traders
                 DataTable dt = new DataTable();
                 dt.Columns.Add("year", typeof(string));
                 dt.Load(reader);
-                comboBox3.ValueMember = "year";
-                comboBox3.DataSource = dt;
+                comboyear.ValueMember = "year";
+                comboyear.DataSource = dt;
                 con.Close();
             }
             catch (Exception ex)
@@ -81,19 +82,47 @@ namespace ABC_Car_Traders
             //get data from DB and fetch without data duplication
             comboboxbrand();
             comboboxyear();
-            comboBox1.SelectedItem = null;
-            comboBox3.SelectedItem = null;
+            combobrand.SelectedItem = null;
+            comboyear.SelectedItem = null;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(combobrand.Text) || string.IsNullOrEmpty(comboyear.Text))
+            {
+                MessageBox.Show("select a car brand and year","Empty");
+            }
+            else
+            {
+                try
+                {
+                    int count = 0;
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("select * from managecars_tbl where brand = @cbrand and year = @cyear", con);
+                    cmd.Parameters.AddWithValue("@cbrand", combobrand.Text);
+                    cmd.Parameters.AddWithValue("@cyear", comboyear.Text);
+                    cmd.ExecuteNonQuery();
 
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    count = Convert.ToInt32(dt.Rows.Count.ToString());
+                    dataGridView1.DataSource = dt;
+
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error" + ex.Message);
+                }
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
-            {
+            { 
                 BuycarsClickCarDGV frm = new BuycarsClickCarDGV();
 
                 frm.txtcarid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -155,6 +184,20 @@ namespace ABC_Car_Traders
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM managecars_tbl", con);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                dataGridView1.DataSource = dt;
+                con.Close();
+                combobrand.SelectedItem = null;
+                comboyear.SelectedItem = null;
+                textBox1.Clear();
         }
     }
 }

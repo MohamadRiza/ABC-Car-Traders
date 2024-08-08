@@ -36,9 +36,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboyear = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.combobrand = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -60,6 +60,8 @@
             this.managecarstblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aBC_Car_TradersDataSet10 = new ABC_Car_Traders.ABC_Car_TradersDataSet10();
             this.managecars_tblTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet10TableAdapters.managecars_tblTableAdapter();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -67,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managecarstblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet10)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
@@ -88,9 +91,9 @@
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.comboBox3);
+            this.panel4.Controls.Add(this.comboyear);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.combobrand);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Location = new System.Drawing.Point(6, 55);
             this.panel4.Name = "panel4";
@@ -141,13 +144,13 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox3
+            // comboyear
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(252, 12);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 52;
+            this.comboyear.FormattingEnabled = true;
+            this.comboyear.Location = new System.Drawing.Point(252, 12);
+            this.comboyear.Name = "comboyear";
+            this.comboyear.Size = new System.Drawing.Size(121, 21);
+            this.comboyear.TabIndex = 52;
             // 
             // label3
             // 
@@ -161,14 +164,14 @@
             this.label3.TabIndex = 51;
             this.label3.Text = "Year:";
             // 
-            // comboBox1
+            // combobrand
             // 
-            this.comboBox1.DisplayMember = "brand";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(64, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 48;
+            this.combobrand.DisplayMember = "brand";
+            this.combobrand.FormattingEnabled = true;
+            this.combobrand.Location = new System.Drawing.Point(64, 12);
+            this.combobrand.Name = "combobrand";
+            this.combobrand.Size = new System.Drawing.Size(121, 21);
+            this.combobrand.TabIndex = 48;
             // 
             // button1
             // 
@@ -290,7 +293,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(18, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 150;
-            this.dataGridView1.Size = new System.Drawing.Size(942, 294);
+            this.dataGridView1.Size = new System.Drawing.Size(942, 292);
             this.dataGridView1.TabIndex = 49;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -363,6 +366,29 @@
             // 
             this.managecars_tblTableAdapter.ClearBeforeFill = true;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Green;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(93, 32);
+            this.button5.TabIndex = 57;
+            this.button5.Text = "Refresh";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.button5);
+            this.panel5.Location = new System.Drawing.Point(857, 420);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(103, 41);
+            this.panel5.TabIndex = 48;
+            // 
             // BuyaCarasACustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +397,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(994, 517);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -391,6 +418,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managecarstblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet10)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -399,9 +427,9 @@
 
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboyear;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combobrand;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
@@ -427,5 +455,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel5;
     }
 }
