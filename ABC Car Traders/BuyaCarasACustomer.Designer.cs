@@ -97,7 +97,7 @@
             this.panel4.Controls.Add(this.label10);
             this.panel4.Location = new System.Drawing.Point(6, 55);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(810, 50);
+            this.panel4.Size = new System.Drawing.Size(871, 50);
             this.panel4.TabIndex = 48;
             // 
             // button4
@@ -105,16 +105,17 @@
             this.button4.BackColor = System.Drawing.Color.Navy;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(719, 10);
+            this.button4.Location = new System.Drawing.Point(783, 10);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(72, 28);
             this.button4.TabIndex = 55;
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(567, 12);
+            this.textBox1.Location = new System.Drawing.Point(631, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 20);
             this.textBox1.TabIndex = 54;
@@ -127,9 +128,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(505, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 16);
+            this.label2.Size = new System.Drawing.Size(126, 16);
             this.label2.TabIndex = 53;
-            this.label2.Text = "Search:";
+            this.label2.Text = "Search by (Model):";
             // 
             // button3
             // 
@@ -192,7 +193,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(822, 55);
+            this.panel3.Location = new System.Drawing.Point(883, 55);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(170, 41);
             this.panel3.TabIndex = 47;
@@ -215,7 +216,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(421, 11);
+            this.label1.Location = new System.Drawing.Point(466, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 25);
             this.label1.TabIndex = 2;
@@ -227,7 +228,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(996, 49);
+            this.panel1.Size = new System.Drawing.Size(1057, 49);
             this.panel1.TabIndex = 45;
             // 
             // label7
@@ -235,7 +236,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(469, 16);
+            this.label7.Location = new System.Drawing.Point(504, 16);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 25);
             this.label7.TabIndex = 3;
@@ -249,7 +250,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(0, 467);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(996, 51);
+            this.panel2.Size = new System.Drawing.Size(1057, 51);
             this.panel2.TabIndex = 46;
             // 
             // label8
@@ -270,7 +271,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(933, 27);
+            this.label5.Location = new System.Drawing.Point(993, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 5;
@@ -290,7 +291,7 @@
             this.descriptionDataGridViewTextBoxColumn,
             this.pictureDataGridViewImageColumn});
             this.dataGridView1.DataSource = this.managecarstblBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 122);
+            this.dataGridView1.Location = new System.Drawing.Point(54, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 150;
             this.dataGridView1.Size = new System.Drawing.Size(942, 292);
@@ -384,7 +385,7 @@
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.button5);
-            this.panel5.Location = new System.Drawing.Point(857, 420);
+            this.panel5.Location = new System.Drawing.Point(893, 420);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(103, 41);
             this.panel5.TabIndex = 48;
@@ -396,7 +397,7 @@
             this.BackColor = System.Drawing.Color.Navy;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(994, 517);
+            this.ClientSize = new System.Drawing.Size(1057, 517);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel4);

@@ -199,5 +199,38 @@ namespace ABC_Car_Traders
                 comboyear.SelectedItem = null;
                 textBox1.Clear();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int count = 0;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                string srch = textBox1.Text;
+                cmd.CommandText = "select * from managecars_tbl where model like @search";
+                cmd.Parameters.AddWithValue("@search", "%" + srch + "%");
+
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                count = Convert.ToInt32(dt.Rows.Count.ToString());
+                dataGridView1.DataSource = dt;
+                con.Close();
+                if (count == 0)
+                {
+                    MessageBox.Show("Record Not Found!");
+                    textBox1.Clear();
+                }
+                combobrand.SelectedItem = null;
+                comboyear.SelectedItem = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+        }
     }
 }

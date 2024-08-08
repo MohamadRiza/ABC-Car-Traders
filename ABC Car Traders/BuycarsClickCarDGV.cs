@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,17 @@ namespace ABC_Car_Traders
 
         private void button3_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.youtube.com/");//add here gmail
+            string recipientEmail = "recipient@example.com";
+            string gmailUrl = $"https://mail.google.com/mail/?view=cm&fs=1&to={recipientEmail}";
+
+            try
+            {
+                Process.Start(new ProcessStartInfo(gmailUrl) { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
         }
     }
 }

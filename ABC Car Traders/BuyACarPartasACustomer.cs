@@ -157,7 +157,7 @@ namespace ABC_Car_Traders
 
             combobrands.SelectedItem = null;
             comboyear.SelectedItem = null;
-            textBox1.Clear();
+            txtsrchmodel.Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -184,11 +184,45 @@ namespace ABC_Car_Traders
                     dataGridView1.DataSource = dt;
 
                     con.Close();
+                    txtsrchmodel.Clear();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error" + ex.Message);
                 }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {//using 
+            try
+            {
+                int count = 0;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                string srch = txtsrchmodel.Text;
+                cmd.CommandText = "SELECT * FROM manageparts WHERE partname LIKE @search OR carmodel LIKE @search";
+                cmd.Parameters.AddWithValue("@search", "%" + srch + "%");
+
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                count = Convert.ToInt32(dt.Rows.Count.ToString());
+                dataGridView1.DataSource = dt;
+                con.Close();
+                if (count == 0)
+                {
+                    MessageBox.Show("Record Not Found!");
+                    txtsrchmodel.Clear();
+                }
+                combobrands.SelectedItem = null;
+                comboyear.SelectedItem = null;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
             }
         }
     }
