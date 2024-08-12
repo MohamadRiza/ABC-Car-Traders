@@ -91,5 +91,19 @@ namespace ABC_Car_Traders
             VerifyUnamePsswd frm = new VerifyUnamePsswd();
             frm.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageCustomerOrdersAsaAdmin frm = new ManageCustomerOrdersAsaAdmin();
+            frm.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageCustomerOrdersAsaAdmin frm = new ManageCustomerOrdersAsaAdmin();
+            frm.Show();
+        }
     }
 }

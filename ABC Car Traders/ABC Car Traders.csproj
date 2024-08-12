@@ -189,6 +189,12 @@
     <Compile Include="managecustomer.Designer.cs">
       <DependentUpon>managecustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageCustomerOrdersAsaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCustomerOrdersAsaAdmin.Designer.cs">
+      <DependentUpon>ManageCustomerOrdersAsaAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageParts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="managecustomer.resx">
       <DependentUpon>managecustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCustomerOrdersAsaAdmin.resx">
+      <DependentUpon>ManageCustomerOrdersAsaAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageParts.resx">
       <DependentUpon>ManageParts.cs</DependentUpon>

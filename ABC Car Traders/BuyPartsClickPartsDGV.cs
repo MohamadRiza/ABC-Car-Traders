@@ -42,5 +42,10 @@ namespace ABC_Car_Traders
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
