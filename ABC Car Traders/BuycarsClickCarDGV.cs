@@ -59,7 +59,7 @@ namespace ABC_Car_Traders
                 cmd.Parameters.AddWithValue("@id", txtcarid.Text);
                 cmd.ExecuteNonQuery();
 
-                //chack Stock
+                //chack Stock (if That item is Available?)
                 SqlCommand cmd2 = new SqlCommand("SELECT stock FROM managecars_tbl WHERE id = @id", con);
                 cmd2.Parameters.AddWithValue("@id", txtcarid.Text);
                 int updatedStock = (int)cmd2.ExecuteScalar(); // Getting the updated stock value
@@ -70,7 +70,7 @@ namespace ABC_Car_Traders
                 }
                 else
                 {
-
+                    //get username and password from login form and use it for get customer id
                     //cmd4
                     SqlCommand cmd4 = new SqlCommand("select cid from customer_tbl where email = @Wemail and password = @Wpassword", con);
                     cmd4.Parameters.AddWithValue("@Wemail", LoginUser.welcomeuser);
@@ -91,9 +91,8 @@ namespace ABC_Car_Traders
                     cmd3.Parameters.AddWithValue("@OrderDateTime", DateTime.Now);
                     cmd3.Parameters.AddWithValue("@OrderStatus", "Order Confirmed! Waiting to Ship");
                     cmd3.ExecuteNonQuery();
-                   
 
-
+                    this.Hide();
                     MessageBox.Show("Order confirmed!");
 
                     con.Close();

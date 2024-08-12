@@ -84,5 +84,19 @@ namespace ABC_Car_Traders
             BuyACarPartasACustomer frm = new BuyACarPartasACustomer();
             frm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrderStatusCustomer frm = new OrderStatusCustomer();
+            frm.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrderStatusCustomer frm = new OrderStatusCustomer();
+            frm.Show();
+        }
     }
 }

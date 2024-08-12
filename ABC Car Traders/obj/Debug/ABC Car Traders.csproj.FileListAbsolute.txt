@@ -26,3 +26,4 @@ C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Tr
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.BuyACarPartasACustomer.resources
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.BuyPartsClickPartsDGV.resources
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.ManageCustomerOrdersAsaAdmin.resources
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.OrderStatusCustomer.resources
