@@ -48,7 +48,7 @@ namespace ABC_Car_Traders
                     MessageBox.Show("Welcome back Admin!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Admin_Dashboard adb = new Admin_Dashboard();
-                    adb.Show();
+                    adb.ShowDialog();
                 }
                 else
                 {
@@ -61,7 +61,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             LoginUser frm = new LoginUser();
-            frm.Show();
+            frm.ShowDialog();
             this.Hide();
         }
 
@@ -69,7 +69,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             CustomerRegister frm = new CustomerRegister();
-            frm.Show();
+            frm.ShowDialog();
             this.Hide();
         }
 

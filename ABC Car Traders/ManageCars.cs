@@ -53,7 +53,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             Admin_Dashboard frma = new Admin_Dashboard();
-            frma.Show();
+            frma.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

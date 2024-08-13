@@ -64,7 +64,7 @@ namespace ABC_Car_Traders
                 cmd2.Parameters.AddWithValue("@id", txtcarid.Text);
                 int updatedStock = (int)cmd2.ExecuteScalar(); // Getting the updated stock value
 
-                if (updatedStock <= 0)
+                if (updatedStock <= -1)
                 {
                     MessageBox.Show("Stock is empty. Unable to process further orders.");
                 }
@@ -100,8 +100,9 @@ namespace ABC_Car_Traders
             }
             else if(MessageBox.Show("do you want to change details?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                this.Hide();
                 CustomerProfileinDshBD frm = new CustomerProfileinDshBD();
-                frm.Show();
+                frm.ShowDialog();
             }
         }
     }

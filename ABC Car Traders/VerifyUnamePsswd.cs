@@ -23,7 +23,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             Admin_Dashboard frm = new Admin_Dashboard();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace ABC_Car_Traders
                     MessageBox.Show("Thanks for Verifying...!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     managecustomer frm = new managecustomer();
-                    frm.Show();
+                    frm.ShowDialog();
 
                 }
                 else
@@ -64,6 +64,11 @@ namespace ABC_Car_Traders
                     MessageBox.Show("Username or password is incorrect.");
                 }
             }
+        }
+
+        private void VerifyUnamePsswd_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,7 +28,7 @@ namespace ABC_Car_Traders
             {
                 this.Hide();
                 LoginUser frm = new LoginUser();
-                frm.Show();
+                frm.ShowDialog();
             }
         }
 
@@ -47,56 +47,56 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             CustomerProfileinDshBD frmc = new CustomerProfileinDshBD();
-            frmc.Show();
+            frmc.ShowDialog();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
             CustomerProfileinDshBD frmc = new CustomerProfileinDshBD();
-            frmc.Show();
+            frmc.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             BuyaCarasACustomer bcfrm = new BuyaCarasACustomer();
-            bcfrm.Show();
+            bcfrm.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
             BuyaCarasACustomer bcfrm = new BuyaCarasACustomer();
-            bcfrm.Show();
+            bcfrm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             BuyACarPartasACustomer frm = new BuyACarPartasACustomer();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
             BuyACarPartasACustomer frm = new BuyACarPartasACustomer();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
             OrderStatusCustomer frm = new OrderStatusCustomer();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
             OrderStatusCustomer frm = new OrderStatusCustomer();
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

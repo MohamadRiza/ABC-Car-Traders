@@ -28,7 +28,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             CustomerLoginDashboard frm = new CustomerLoginDashboard();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void OrderStatusCustomer_Load(object sender, EventArgs e)
@@ -69,10 +69,43 @@ namespace ABC_Car_Traders
             con.Close();
 
         }
+        private void loadgridpart()
+        {
+            con.Open();
+
+            SqlCommand cmd2 = new SqlCommand("SELECT cid FROM customer_tbl WHERE email = @Wemail AND password = @psswd", con);
+            cmd2.Parameters.AddWithValue("@Wemail", LoginUser.welcomeuser);
+            cmd2.Parameters.AddWithValue("@psswd", LoginUser.textboxfetchpassword);
+
+            SqlDataReader reader = cmd2.ExecuteReader();
+            int customerId = 0;
+            if (reader.Read())
+            {
+                customerId = (int)reader["cid"];
+            }
+            reader.Close();
+            if (customerId > 0)
+            {
+                // Fetch orders specific to the logged-in customer
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Customer_Orders_A_Part WHERE CustomerID = @customerId", con);
+                cmd.Parameters.AddWithValue("@customerId", customerId);
+
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                dataGridView2.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("No orders found for this customer.");
+            }
+
+            con.Close();
+        }
 
         private void OrderStatusCustomer_Load_1(object sender, EventArgs e)
         {
             loadgridcar();
+            loadgridpart();
         }
     }
 }

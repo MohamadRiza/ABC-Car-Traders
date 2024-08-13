@@ -62,7 +62,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             Admin_Dashboard frmd = new Admin_Dashboard();
-            frmd.Show();
+            frmd.ShowDialog();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace ABC_Car_Traders
                 }
                 this.Hide();
                 Admin frm = new Admin();
-                frm.Show();
+                frm.ShowDialog();
             }
         }
 

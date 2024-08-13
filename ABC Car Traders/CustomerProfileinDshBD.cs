@@ -91,7 +91,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             CustomerLoginDashboard frmcdb = new CustomerLoginDashboard();
-            frmcdb.Show();
+            frmcdb.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace ABC_Car_Traders
                     }
                     this.Hide();
                     LoginUser frmu = new LoginUser();
-                    frmu.Show();
+                    frmu.ShowDialog();
                 }
             }
         }

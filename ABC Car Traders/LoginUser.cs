@@ -34,7 +34,7 @@ namespace ABC_Car_Traders
             {
                 this.Hide();
                 Admin frmadmin = new Admin();
-                frmadmin.Show();
+                frmadmin.ShowDialog();
                 this.Hide();
             }
             else
@@ -47,7 +47,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             CustomerRegister frm = new CustomerRegister();
-            frm.Show();
+            frm.ShowDialog();
             this.Hide();
         }
 
@@ -102,7 +102,7 @@ namespace ABC_Car_Traders
                     textboxfetchpassword = textBox2.Text; // get password textbox to user userprofilepage/usersettings
                     this.Hide();
                     CustomerLoginDashboard cdb = new CustomerLoginDashboard();
-                    cdb.Show();
+                    cdb.ShowDialog();
                 }
                 else
                 {

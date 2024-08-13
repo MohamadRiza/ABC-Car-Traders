@@ -33,7 +33,7 @@ namespace ABC_Car_Traders
             { 
             this.Hide();
             Admin frma = new Admin();
-            frma.Show();
+            frma.ShowDialog();
             }
         }
 
@@ -41,14 +41,14 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             ManageCars frm = new ManageCars();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
             ManageCars frm = new ManageCars();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -60,21 +60,21 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             ManageParts mpfrm = new ManageParts();
-            mpfrm.Show();
+            mpfrm.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
             ManageParts mpfrm2 = new ManageParts();
-            mpfrm2.Show();
+            mpfrm2.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("do you want to open Settings?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                 Settings frmsting = new Settings();
-                frmsting.Show();
+                frmsting.ShowDialog();
             }
         }
 
@@ -82,28 +82,28 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             VerifyUnamePsswd frm = new VerifyUnamePsswd();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
             VerifyUnamePsswd frm = new VerifyUnamePsswd();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
             ManageCustomerOrdersAsaAdmin frm = new ManageCustomerOrdersAsaAdmin();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
             ManageCustomerOrdersAsaAdmin frm = new ManageCustomerOrdersAsaAdmin();
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

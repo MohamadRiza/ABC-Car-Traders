@@ -256,6 +256,7 @@
             this.Name = "VerifyUnamePsswd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VerifyUnamePsswd";
+            this.Load += new System.EventHandler(this.VerifyUnamePsswd_Load);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

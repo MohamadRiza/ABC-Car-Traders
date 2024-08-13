@@ -70,7 +70,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             CustomerLoginDashboard frm = new CustomerLoginDashboard();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void BuyaCarasACustomer_Load(object sender, EventArgs e)

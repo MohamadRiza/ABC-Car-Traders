@@ -84,7 +84,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             CustomerLoginDashboard frm = new CustomerLoginDashboard();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

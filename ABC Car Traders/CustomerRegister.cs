@@ -25,7 +25,7 @@ namespace ABC_Car_Traders
             {
                 this.Hide();
                 Admin frmadmin = new Admin();
-                frmadmin.Show();
+                frmadmin.ShowDialog();
                 this.Hide();
             }
             else
@@ -45,7 +45,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             LoginUser frm = new LoginUser();
-            frm.Show();
+            frm.ShowDialog();
             this.Hide();
         }
 
@@ -105,7 +105,7 @@ namespace ABC_Car_Traders
                     {
                         this.Hide();
                         LoginUser frm = new LoginUser();
-                        frm.Show();
+                        frm.ShowDialog();
                     }
 
                     txtcname.Clear();

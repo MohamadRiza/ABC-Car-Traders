@@ -117,7 +117,7 @@ namespace ABC_Car_Traders
         {
             this.Hide();
             Admin_Dashboard frm = new Admin_Dashboard();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
