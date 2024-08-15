@@ -75,8 +75,10 @@ namespace ABC_Car_Traders
 
         private void BuyaCarasACustomer_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet20.managecars_tbl' table. You can move, or remove it, as needed.
+            this.managecars_tblTableAdapter1.Fill(this.aBC_Car_TradersDataSet20.managecars_tbl);
             // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet10.managecars_tbl' table. You can move, or remove it, as needed.
-            this.managecars_tblTableAdapter.Fill(this.aBC_Car_TradersDataSet10.managecars_tbl);
+            //this.managecars_tblTableAdapter.Fill(this.aBC_Car_TradersDataSet10.managecars_tbl);
             panel4.BackColor = Color.FromArgb(185, Color.Black);
             
             //get data from DB and fetch without data duplication

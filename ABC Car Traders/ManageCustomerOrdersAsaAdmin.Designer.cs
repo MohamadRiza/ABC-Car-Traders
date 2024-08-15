@@ -40,6 +40,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnfiltercar = new System.Windows.Forms.Button();
+            this.combofiltercar = new System.Windows.Forms.ComboBox();
+            this.customerOrdersACarBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aBC_Car_TradersDataSet18 = new ABC_Car_Traders.ABC_Car_TradersDataSet18();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnupdatecar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.comboupdatecars = new System.Windows.Forms.ComboBox();
@@ -54,6 +60,10 @@
             this.aBC_Car_TradersDataSet15 = new ABC_Car_Traders.ABC_Car_TradersDataSet15();
             this.customer_Orders_A_CarTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet15TableAdapters.Customer_Orders_A_CarTableAdapter();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnfilterparts = new System.Windows.Forms.Button();
+            this.combofilterparts = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnupdateparts = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,21 +80,16 @@
             this.customerOrdersAPartBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customer_Orders_A_PartTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet16TableAdapters.Customer_Orders_A_PartTableAdapter();
             this.customer_Orders_A_PartTableAdapter1 = new ABC_Car_Traders.ABC_Car_TradersDataSet17TableAdapters.Customer_Orders_A_PartTableAdapter();
-            this.label9 = new System.Windows.Forms.Label();
-            this.combofiltercar = new System.Windows.Forms.ComboBox();
-            this.btnfiltercar = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.combofilterparts = new System.Windows.Forms.ComboBox();
-            this.btnfilterparts = new System.Windows.Forms.Button();
-            this.aBC_Car_TradersDataSet18 = new ABC_Car_Traders.ABC_Car_TradersDataSet18();
-            this.customerOrdersACarBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.customer_Orders_A_CarTableAdapter1 = new ABC_Car_Traders.ABC_Car_TradersDataSet18TableAdapters.Customer_Orders_A_CarTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.aBC_Car_TradersDataSet21 = new ABC_Car_Traders.ABC_Car_TradersDataSet21();
+            this.customerOrdersAPartBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.customer_Orders_A_PartTableAdapter2 = new ABC_Car_Traders.ABC_Car_TradersDataSet21TableAdapters.Customer_Orders_A_PartTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerOrdersACarBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerOrdersACarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet15)).BeginInit();
@@ -94,8 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerOrdersAPartBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerOrdersACarBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerOrdersAPartBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -217,6 +222,62 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(573, 363);
             this.panel3.TabIndex = 55;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(489, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 28);
+            this.button1.TabIndex = 74;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnfiltercar
+            // 
+            this.btnfiltercar.BackColor = System.Drawing.Color.Blue;
+            this.btnfiltercar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfiltercar.ForeColor = System.Drawing.Color.White;
+            this.btnfiltercar.Location = new System.Drawing.Point(393, 68);
+            this.btnfiltercar.Name = "btnfiltercar";
+            this.btnfiltercar.Size = new System.Drawing.Size(75, 28);
+            this.btnfiltercar.TabIndex = 73;
+            this.btnfiltercar.Text = "Filter";
+            this.btnfiltercar.UseVisualStyleBackColor = false;
+            this.btnfiltercar.Click += new System.EventHandler(this.btnfiltercar_Click);
+            // 
+            // combofiltercar
+            // 
+            this.combofiltercar.FormattingEnabled = true;
+            this.combofiltercar.Location = new System.Drawing.Point(187, 70);
+            this.combofiltercar.Name = "combofiltercar";
+            this.combofiltercar.Size = new System.Drawing.Size(200, 21);
+            this.combofiltercar.TabIndex = 72;
+            // 
+            // customerOrdersACarBindingSource1
+            // 
+            this.customerOrdersACarBindingSource1.DataMember = "Customer_Orders_A_Car";
+            this.customerOrdersACarBindingSource1.DataSource = this.aBC_Car_TradersDataSet18;
+            // 
+            // aBC_Car_TradersDataSet18
+            // 
+            this.aBC_Car_TradersDataSet18.DataSetName = "ABC_Car_TradersDataSet18";
+            this.aBC_Car_TradersDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(9, 70);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(155, 16);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "Filter By (Order Status):";
             // 
             // btnupdatecar
             // 
@@ -348,6 +409,52 @@
             this.panel5.Size = new System.Drawing.Size(573, 363);
             this.panel5.TabIndex = 56;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(488, 332);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 28);
+            this.button2.TabIndex = 76;
+            this.button2.Text = "Refresh";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnfilterparts
+            // 
+            this.btnfilterparts.BackColor = System.Drawing.Color.Blue;
+            this.btnfilterparts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfilterparts.ForeColor = System.Drawing.Color.White;
+            this.btnfilterparts.Location = new System.Drawing.Point(390, 68);
+            this.btnfilterparts.Name = "btnfilterparts";
+            this.btnfilterparts.Size = new System.Drawing.Size(75, 28);
+            this.btnfilterparts.TabIndex = 75;
+            this.btnfilterparts.Text = "Filter";
+            this.btnfilterparts.UseVisualStyleBackColor = false;
+            this.btnfilterparts.Click += new System.EventHandler(this.btnfilterparts_Click);
+            // 
+            // combofilterparts
+            // 
+            this.combofilterparts.FormattingEnabled = true;
+            this.combofilterparts.Location = new System.Drawing.Point(173, 70);
+            this.combofilterparts.Name = "combofilterparts";
+            this.combofilterparts.Size = new System.Drawing.Size(211, 21);
+            this.combofilterparts.TabIndex = 74;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(12, 70);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 16);
+            this.label10.TabIndex = 73;
+            this.label10.Text = "Filter By (Order Status):";
+            // 
             // btnupdateparts
             // 
             this.btnupdateparts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -359,6 +466,7 @@
             this.btnupdateparts.TabIndex = 71;
             this.btnupdateparts.Text = "Update";
             this.btnupdateparts.UseVisualStyleBackColor = false;
+            this.btnupdateparts.Click += new System.EventHandler(this.btnupdateparts_Click);
             // 
             // label6
             // 
@@ -386,6 +494,12 @@
             // comboupdatepartss
             // 
             this.comboupdatepartss.FormattingEnabled = true;
+            this.comboupdatepartss.Items.AddRange(new object[] {
+            "Order Confirmed! Waiting to Ship",
+            "Shipped",
+            "On The Way to Deliver",
+            "Delivered",
+            "Cancelled"});
             this.comboupdatepartss.Location = new System.Drawing.Point(174, 102);
             this.comboupdatepartss.Name = "comboupdatepartss";
             this.comboupdatepartss.Size = new System.Drawing.Size(210, 21);
@@ -407,6 +521,7 @@
             this.dataGridView2.RowTemplate.Height = 50;
             this.dataGridView2.Size = new System.Drawing.Size(552, 194);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // oidDataGridViewTextBoxColumn1
             // 
@@ -467,112 +582,23 @@
             // 
             this.customer_Orders_A_PartTableAdapter1.ClearBeforeFill = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(9, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(155, 16);
-            this.label9.TabIndex = 71;
-            this.label9.Text = "Filter By (Order Status):";
-            // 
-            // combofiltercar
-            // 
-            this.combofiltercar.DataSource = this.customerOrdersACarBindingSource1;
-            this.combofiltercar.DisplayMember = "OrderStatus";
-            this.combofiltercar.FormattingEnabled = true;
-            this.combofiltercar.Location = new System.Drawing.Point(187, 70);
-            this.combofiltercar.Name = "combofiltercar";
-            this.combofiltercar.Size = new System.Drawing.Size(200, 21);
-            this.combofiltercar.TabIndex = 72;
-            this.combofiltercar.ValueMember = "OrderStatus";
-            // 
-            // btnfiltercar
-            // 
-            this.btnfiltercar.BackColor = System.Drawing.Color.Blue;
-            this.btnfiltercar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfiltercar.ForeColor = System.Drawing.Color.White;
-            this.btnfiltercar.Location = new System.Drawing.Point(393, 68);
-            this.btnfiltercar.Name = "btnfiltercar";
-            this.btnfiltercar.Size = new System.Drawing.Size(75, 28);
-            this.btnfiltercar.TabIndex = 73;
-            this.btnfiltercar.Text = "Filter";
-            this.btnfiltercar.UseVisualStyleBackColor = false;
-            this.btnfiltercar.Click += new System.EventHandler(this.btnfiltercar_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(12, 70);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 16);
-            this.label10.TabIndex = 73;
-            this.label10.Text = "Filter By (Order Status):";
-            // 
-            // combofilterparts
-            // 
-            this.combofilterparts.FormattingEnabled = true;
-            this.combofilterparts.Location = new System.Drawing.Point(173, 70);
-            this.combofilterparts.Name = "combofilterparts";
-            this.combofilterparts.Size = new System.Drawing.Size(211, 21);
-            this.combofilterparts.TabIndex = 74;
-            // 
-            // btnfilterparts
-            // 
-            this.btnfilterparts.BackColor = System.Drawing.Color.Blue;
-            this.btnfilterparts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfilterparts.ForeColor = System.Drawing.Color.White;
-            this.btnfilterparts.Location = new System.Drawing.Point(390, 68);
-            this.btnfilterparts.Name = "btnfilterparts";
-            this.btnfilterparts.Size = new System.Drawing.Size(75, 28);
-            this.btnfilterparts.TabIndex = 75;
-            this.btnfilterparts.Text = "Filter";
-            this.btnfilterparts.UseVisualStyleBackColor = false;
-            // 
-            // aBC_Car_TradersDataSet18
-            // 
-            this.aBC_Car_TradersDataSet18.DataSetName = "ABC_Car_TradersDataSet18";
-            this.aBC_Car_TradersDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerOrdersACarBindingSource1
-            // 
-            this.customerOrdersACarBindingSource1.DataMember = "Customer_Orders_A_Car";
-            this.customerOrdersACarBindingSource1.DataSource = this.aBC_Car_TradersDataSet18;
-            // 
             // customer_Orders_A_CarTableAdapter1
             // 
             this.customer_Orders_A_CarTableAdapter1.ClearBeforeFill = true;
             // 
-            // button1
+            // aBC_Car_TradersDataSet21
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(489, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 74;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.aBC_Car_TradersDataSet21.DataSetName = "ABC_Car_TradersDataSet21";
+            this.aBC_Car_TradersDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button2
+            // customerOrdersAPartBindingSource2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(488, 332);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
-            this.button2.TabIndex = 76;
-            this.button2.Text = "Refresh";
-            this.button2.UseVisualStyleBackColor = false;
+            this.customerOrdersAPartBindingSource2.DataMember = "Customer_Orders_A_Part";
+            this.customerOrdersAPartBindingSource2.DataSource = this.aBC_Car_TradersDataSet21;
+            // 
+            // customer_Orders_A_PartTableAdapter2
+            // 
+            this.customer_Orders_A_PartTableAdapter2.ClearBeforeFill = true;
             // 
             // ManageCustomerOrdersAsaAdmin
             // 
@@ -599,6 +625,8 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerOrdersACarBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerOrdersACarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet15)).EndInit();
@@ -609,8 +637,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerOrdersAPartBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerOrdersACarBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerOrdersAPartBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,5 +696,8 @@
         private ABC_Car_TradersDataSet18TableAdapters.Customer_Orders_A_CarTableAdapter customer_Orders_A_CarTableAdapter1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private ABC_Car_TradersDataSet21 aBC_Car_TradersDataSet21;
+        private System.Windows.Forms.BindingSource customerOrdersAPartBindingSource2;
+        private ABC_Car_TradersDataSet21TableAdapters.Customer_Orders_A_PartTableAdapter customer_Orders_A_PartTableAdapter2;
     }
 }

@@ -67,8 +67,10 @@ namespace ABC_Car_Traders
 
         private void ManageCars_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet19.managecars_tbl' table. You can move, or remove it, as needed.
+            this.managecars_tblTableAdapter1.Fill(this.aBC_Car_TradersDataSet19.managecars_tbl);
             // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet.managecars_tbl' table. You can move, or remove it, as needed.
-            this.managecars_tblTableAdapter.Fill(this.aBC_Car_TradersDataSet.managecars_tbl);
+            //this.managecars_tblTableAdapter.Fill(this.aBC_Car_TradersDataSet.managecars_tbl);
             panel6.BackColor = Color.FromArgb(185, Color.Black);
             panel3.BackColor = Color.FromArgb(185, Color.Black);
             panel7.BackColor = Color.FromArgb(185, Color.Black);

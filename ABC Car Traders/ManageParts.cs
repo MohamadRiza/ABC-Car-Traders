@@ -44,9 +44,9 @@ namespace ABC_Car_Traders
         private void button3_Click(object sender, EventArgs e)
         {
             //********************** insert ************************************
-            if (string.IsNullOrWhiteSpace(txtname.Text) || string.IsNullOrEmpty(txtmodel.Text) || string.IsNullOrEmpty(txtbrand.Text) || string.IsNullOrEmpty(comboyear.Text) || string.IsNullOrEmpty(txtprice.Text) || string.IsNullOrEmpty(txtstock.Text))
+            if (string.IsNullOrWhiteSpace(txtname.Text) || string.IsNullOrEmpty(txtmodel.Text) || string.IsNullOrEmpty(txtbrand.Text) || string.IsNullOrEmpty(comboyear.Text) || string.IsNullOrEmpty(txtprice.Text) || string.IsNullOrEmpty(txtstock.Text) || pictureBox1.Image == null)
                 {//this if else use for make sure text boxes are not empty
-                MessageBox.Show("textboxes are empty!");
+                MessageBox.Show("textboxes are empty! or image not selected");
             }
             else
             {
@@ -244,6 +244,7 @@ namespace ABC_Car_Traders
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

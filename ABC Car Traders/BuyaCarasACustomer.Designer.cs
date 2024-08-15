@@ -62,6 +62,9 @@
             this.managecars_tblTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet10TableAdapters.managecars_tblTableAdapter();
             this.button5 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.aBC_Car_TradersDataSet20 = new ABC_Car_Traders.ABC_Car_TradersDataSet20();
+            this.managecarstblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.managecars_tblTableAdapter1 = new ABC_Car_Traders.ABC_Car_TradersDataSet20TableAdapters.managecars_tblTableAdapter();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.managecarstblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet10)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managecarstblBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -290,7 +295,7 @@
             this.stockDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.pictureDataGridViewImageColumn});
-            this.dataGridView1.DataSource = this.managecarstblBindingSource;
+            this.dataGridView1.DataSource = this.managecarstblBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(54, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 150;
@@ -390,6 +395,20 @@
             this.panel5.Size = new System.Drawing.Size(103, 41);
             this.panel5.TabIndex = 48;
             // 
+            // aBC_Car_TradersDataSet20
+            // 
+            this.aBC_Car_TradersDataSet20.DataSetName = "ABC_Car_TradersDataSet20";
+            this.aBC_Car_TradersDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // managecarstblBindingSource1
+            // 
+            this.managecarstblBindingSource1.DataMember = "managecars_tbl";
+            this.managecarstblBindingSource1.DataSource = this.aBC_Car_TradersDataSet20;
+            // 
+            // managecars_tblTableAdapter1
+            // 
+            this.managecars_tblTableAdapter1.ClearBeforeFill = true;
+            // 
             // BuyaCarasACustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +439,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.managecarstblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet10)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.aBC_Car_TradersDataSet20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managecarstblBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,5 +479,8 @@
         private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel5;
+        private ABC_Car_TradersDataSet20 aBC_Car_TradersDataSet20;
+        private System.Windows.Forms.BindingSource managecarstblBindingSource1;
+        private ABC_Car_TradersDataSet20TableAdapters.managecars_tblTableAdapter managecars_tblTableAdapter1;
     }
 }
