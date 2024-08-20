@@ -156,6 +156,7 @@
             this.button7.TabIndex = 16;
             this.button7.Text = "Genarate Report";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox5
             // 

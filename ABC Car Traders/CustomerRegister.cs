@@ -39,6 +39,8 @@ namespace ABC_Car_Traders
             // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet4.country_For_Combobox' table. You can move, or remove it, as needed.
             this.country_For_ComboboxTableAdapter.Fill(this.aBC_Car_TradersDataSet4.country_For_Combobox);
             panel3.BackColor = Color.FromArgb(185, Color.Black);
+
+            combocountry.SelectedItem = null;
         }
 
         private void button6_Click(object sender, EventArgs e)

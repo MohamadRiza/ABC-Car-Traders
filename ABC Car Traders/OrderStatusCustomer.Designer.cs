@@ -49,13 +49,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labeldeliverystatus = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelOrdDate = new System.Windows.Forms.Label();
             this.labelORDID = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.labelOrdDate = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labeldeliverystatus = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -277,65 +277,6 @@
             this.panel7.Size = new System.Drawing.Size(289, 359);
             this.panel7.TabIndex = 58;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(45, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 25);
-            this.label4.TabIndex = 55;
-            this.label4.Text = "Ordered Goods Details";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(46, 237);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 20);
-            this.label6.TabIndex = 55;
-            this.label6.Text = "Status: ";
-            // 
-            // labeldeliverystatus
-            // 
-            this.labeldeliverystatus.AutoSize = true;
-            this.labeldeliverystatus.BackColor = System.Drawing.Color.Transparent;
-            this.labeldeliverystatus.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldeliverystatus.ForeColor = System.Drawing.Color.White;
-            this.labeldeliverystatus.Location = new System.Drawing.Point(108, 237);
-            this.labeldeliverystatus.Name = "labeldeliverystatus";
-            this.labeldeliverystatus.Size = new System.Drawing.Size(13, 20);
-            this.labeldeliverystatus.TabIndex = 58;
-            this.labeldeliverystatus.Text = " ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(8, 278);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
-            this.label9.TabIndex = 59;
-            this.label9.Text = "Ordered Date:";
-            // 
-            // labelOrdDate
-            // 
-            this.labelOrdDate.AutoSize = true;
-            this.labelOrdDate.BackColor = System.Drawing.Color.Transparent;
-            this.labelOrdDate.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrdDate.ForeColor = System.Drawing.Color.White;
-            this.labelOrdDate.Location = new System.Drawing.Point(108, 278);
-            this.labelOrdDate.Name = "labelOrdDate";
-            this.labelOrdDate.Size = new System.Drawing.Size(13, 20);
-            this.labelOrdDate.TabIndex = 60;
-            this.labelOrdDate.Text = " ";
-            // 
             // labelORDID
             // 
             this.labelORDID.AutoSize = true;
@@ -359,6 +300,65 @@
             this.label11.Size = new System.Drawing.Size(64, 20);
             this.label11.TabIndex = 61;
             this.label11.Text = "Order ID:";
+            // 
+            // labelOrdDate
+            // 
+            this.labelOrdDate.AutoSize = true;
+            this.labelOrdDate.BackColor = System.Drawing.Color.Transparent;
+            this.labelOrdDate.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOrdDate.ForeColor = System.Drawing.Color.White;
+            this.labelOrdDate.Location = new System.Drawing.Point(108, 278);
+            this.labelOrdDate.Name = "labelOrdDate";
+            this.labelOrdDate.Size = new System.Drawing.Size(13, 20);
+            this.labelOrdDate.TabIndex = 60;
+            this.labelOrdDate.Text = " ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(8, 278);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 20);
+            this.label9.TabIndex = 59;
+            this.label9.Text = "Ordered Date:";
+            // 
+            // labeldeliverystatus
+            // 
+            this.labeldeliverystatus.AutoSize = true;
+            this.labeldeliverystatus.BackColor = System.Drawing.Color.Transparent;
+            this.labeldeliverystatus.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldeliverystatus.ForeColor = System.Drawing.Color.White;
+            this.labeldeliverystatus.Location = new System.Drawing.Point(108, 237);
+            this.labeldeliverystatus.Name = "labeldeliverystatus";
+            this.labeldeliverystatus.Size = new System.Drawing.Size(13, 20);
+            this.labeldeliverystatus.TabIndex = 58;
+            this.labeldeliverystatus.Text = " ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(46, 237);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 20);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Status: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(45, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(205, 25);
+            this.label4.TabIndex = 55;
+            this.label4.Text = "Ordered Goods Details";
             // 
             // OrderStatusCustomer
             // 

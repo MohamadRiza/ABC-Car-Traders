@@ -30,6 +30,8 @@ namespace ABC_Car_Traders
             this.customer_tblTableAdapter.Fill(this.aBC_Car_TradersDataSet2.customer_tbl);
             panel6.BackColor = Color.FromArgb(185, Color.Black);
             panel7.BackColor = Color.FromArgb(185, Color.Black);
+
+            combocountry.SelectedItem = null;
         }
         private void cleartextboxes()
         {

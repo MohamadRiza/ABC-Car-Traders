@@ -105,5 +105,10 @@ namespace ABC_Car_Traders
             ManageCustomerOrdersAsaAdmin frm = new ManageCustomerOrdersAsaAdmin();
             frm.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

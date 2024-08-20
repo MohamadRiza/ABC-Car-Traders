@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;//1
 using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 
 namespace ABC_Car_Traders
 {
@@ -111,6 +112,8 @@ namespace ABC_Car_Traders
             this.customer_Orders_A_PartTableAdapter.Fill(this.aBC_Car_TradersDataSet16.Customer_Orders_A_Part);
             // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet15.Customer_Orders_A_Car' table. You can move, or remove it, as needed.
             this.customer_Orders_A_CarTableAdapter.Fill(this.aBC_Car_TradersDataSet15.Customer_Orders_A_Car);
+            panel6.BackColor = Color.FromArgb(185, Color.Black);
+
             cleartextboxescars();
             panel3.BackColor = Color.FromArgb(185, Color.Black);
             panel5.BackColor = Color.FromArgb(185, Color.Black);
@@ -261,8 +264,55 @@ namespace ABC_Car_Traders
             //combofilterparts.SelectedItem = selectedRow.Cells[3].Value.ToString();
             comboupdatepartss.SelectedItem = selectedRow.Cells[4].Value.ToString();
             string ordid = selectedRow.Cells[0].Value.ToString();
-
             selectedOrdid2 = ordid;
+
+            //confirms is it correct/fetch from panel6
+            orderid.Text = selectedRow.Cells[0].Value.ToString();
+            carid.Text = selectedRow.Cells[1].Value.ToString();
+            customerid.Text = selectedRow.Cells[2].Value.ToString();
+            orddate.Text = selectedRow.Cells[3].Value.ToString();
+            ostatus.Text = selectedRow.Cells[4].Value.ToString();
+
+            int productId = Convert.ToInt32(selectedRow.Cells[1].Value);
+            FetchAndDisplayImage(productId);
+
+        }
+
+        private void FetchAndDisplayImage(int productId)//Database to fetch car image again to picturebox
+        {//this is for datagridview cell click IMAGE
+            // Connection string to your database
+            string connectionString = "Data Source=DELL\\MSSQLSERVER01;Initial Catalog=ABC_Car_Traders;Integrated Security=True";
+
+            // SQL query to fetch the image data
+            string query = "SELECT picture FROM manageparts WHERE partid = @ProductID";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ProductID", productId);
+
+                    connection.Open();
+                    byte[] imageData = command.ExecuteScalar() as byte[];
+                    connection.Close();
+
+                    if (imageData != null)
+                    {
+                        pictureBox1.Image = ByteArrayToImage(imageData);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Image not found for the specified Product ID.");
+                    }
+                }
+            }
+        }
+        private Image ByteArrayToImage(byte[] byteArray)//this is also for fetch image 
+        {//this is for datagridview cell click IMAGE
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
         private void btnupdateparts_Click(object sender, EventArgs e)
