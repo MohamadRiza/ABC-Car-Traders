@@ -34,7 +34,6 @@ C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDec
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
-C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
@@ -44,3 +43,7 @@ C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDec
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\stdole.dll
 C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.csproj.CopyComplete
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Orderhistoryfromto.resources
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.GenarateaReport.resources
+C:\Users\P Tec\source\repos\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.crystalreportprintview.resources

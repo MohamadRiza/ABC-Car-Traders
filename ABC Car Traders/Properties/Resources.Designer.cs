@@ -63,6 +63,16 @@ namespace ABC_Car_Traders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _22 {
+            get {
+                object obj = ResourceManager.GetObject("22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap car_showroom_interiors {
             get {
                 object obj = ResourceManager.GetObject("car-showroom-interiors", resourceCulture);
@@ -124,6 +134,16 @@ namespace ABC_Car_Traders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_maria_geller_801267_2127039 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-maria-geller-801267-2127039", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_mike_noga_1916934_3541743 {
             get {
                 object obj = ResourceManager.GetObject("pexels-mike-noga-1916934-3541743", resourceCulture);
@@ -147,6 +167,16 @@ namespace ABC_Car_Traders.Properties {
         internal static System.Drawing.Bitmap pexels_tibszabo_17451088 {
             get {
                 object obj = ResourceManager.GetObject("pexels-tibszabo-17451088", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_vladalex94_1402787 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-vladalex94-1402787", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -197,6 +227,16 @@ namespace ABC_Car_Traders.Properties {
         internal static System.Drawing.Bitmap pngtree_modern_double_color_futuristic_neon_background_image_351866 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-modern-double-color-futuristic-neon-background-image_351866", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap po {
+            get {
+                object obj = ResourceManager.GetObject("po", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

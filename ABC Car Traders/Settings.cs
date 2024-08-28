@@ -149,7 +149,7 @@ namespace ABC_Car_Traders
         {
             // TODO: This line of code loads data into the 'aBC_Car_TradersDataSet3.country_For_Combobox' table. You can move, or remove it, as needed.
             this.country_For_ComboboxTableAdapter.Fill(this.aBC_Car_TradersDataSet3.country_For_Combobox);
-            panel6.BackColor = Color.FromArgb(185, Color.Black);
+            //panel6.BackColor = Color.FromArgb(185, Color.Black);
             panel7.BackColor = Color.FromArgb(185, Color.Black);
 
             fetchdatatotextbox();

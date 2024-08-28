@@ -53,7 +53,6 @@
             this.countryForComboboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aBC_Car_TradersDataSet3 = new ABC_Car_Traders.ABC_Car_TradersDataSet3();
             this.country_For_ComboboxTableAdapter = new ABC_Car_Traders.ABC_Car_TradersDataSet3TableAdapters.country_For_ComboboxTableAdapter();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -68,6 +67,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -106,7 +106,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(0, 509);
+            this.panel2.Location = new System.Drawing.Point(0, 459);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1207, 51);
             this.panel2.TabIndex = 8;
@@ -181,7 +181,7 @@
             this.panel5.Controls.Add(this.txtid);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(451, 9);
+            this.panel5.Location = new System.Drawing.Point(421, 52);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(248, 219);
             this.panel5.TabIndex = 44;
@@ -296,7 +296,7 @@
             this.idDataGridViewTextBoxColumn,
             this.countryDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.countryForComboboxBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(716, 11);
+            this.dataGridView1.Location = new System.Drawing.Point(693, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(355, 217);
@@ -331,23 +331,16 @@
             // 
             this.country_For_ComboboxTableAdapter.ClearBeforeFill = true;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(13, 306);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1094, 197);
-            this.panel6.TabIndex = 45;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Controls.Add(this.button8);
             this.panel7.Controls.Add(this.dataGridView1);
             this.panel7.Controls.Add(this.panel5);
             this.panel7.Controls.Add(this.panel3);
-            this.panel7.Location = new System.Drawing.Point(13, 55);
+            this.panel7.Location = new System.Drawing.Point(6, 79);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1094, 245);
+            this.panel7.Size = new System.Drawing.Size(1094, 336);
             this.panel7.TabIndex = 46;
             // 
             // panel3
@@ -363,7 +356,7 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(33, 9);
+            this.panel3.Location = new System.Drawing.Point(23, 52);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(291, 228);
             this.panel3.TabIndex = 36;
@@ -496,15 +489,28 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(966, 277);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(82, 28);
+            this.button8.TabIndex = 43;
+            this.button8.Text = "Refresh";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1207, 559);
+            this.BackgroundImage = global::ABC_Car_Traders.Properties.Resources.po;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1207, 510);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -554,7 +560,6 @@
         private ABC_Car_TradersDataSet3 aBC_Car_TradersDataSet3;
         private System.Windows.Forms.BindingSource countryForComboboxBindingSource;
         private ABC_Car_TradersDataSet3TableAdapters.country_For_ComboboxTableAdapter country_For_ComboboxTableAdapter;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -572,5 +577,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn countryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button8;
     }
 }
